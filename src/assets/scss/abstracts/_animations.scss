@@ -1,0 +1,57 @@
+// APP Loader animation
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Mobile nav
+@keyframes mobilenav {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// modal animation
+@keyframes modal {
+  0% {
+    // opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// success modal
+@keyframes success {
+  0% {
+    transform: scale(0.68);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.68);
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0.6;
+    // transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+}

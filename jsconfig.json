@@ -1,0 +1,10 @@
+{
+  "include": ["./src/**/*", "nuxt.config.js", "nuxt.config.js"],
+  "compilerOptions": {
+   
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"]
+    }
+  }
+}

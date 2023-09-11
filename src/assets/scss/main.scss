@@ -1,0 +1,113 @@
+:root {
+  --vc-clr-primary: #cc4516 !important;
+  --brand-light: #2B3C87;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  isolation: isolate;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: $poppins;
+  font-weight: normal;
+  scroll-behavior: smooth;
+  accent-color: $color-primary;
+
+  // customising the scrollbar for firefox
+  scroll-behavior: smooth;
+  scrollbar-track-color: $color-primary;
+  scrollbar-width: thin;
+  scrollbar-color: $color-primary transparent;
+
+  // Customising the scrollbar for chrome and other webkit browsers
+  &::-webkit-scrollbar {
+    width: 0.4vw;
+    cursor: pointer;
+
+    @include mobile {
+      width: 5px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+  }
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}

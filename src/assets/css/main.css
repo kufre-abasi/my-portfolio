@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vc-clr-primary: #cc4516 !important;
+  }
+  /*
+  1. Use a more-intuitive box-sizing model.
+*/
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  /*
+  2. Remove default margin
+*/
+  * {
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid; */
+  }
+  /*
+  3. Allow percentage-based heights in the application
+*/
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    scroll-behavior: smooth;
+    background-color: #eee;
+    color: #1d1d1d;
+
+    /* customising the scrollbar for firefox */
+    scroll-behavior: smooth;
+    scrollbar-track-color: red;
+    scrollbar-width: thin;
+    scrollbar-color: red transparent;
+  }
+
+  /* the scrollbar for chrome and other webkit browsers */
+  ::-webkit-scrollbar {
+    width: 0.4vw;
+    cursor: pointer;
+    /* display: none;  */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #00afef;
+  }
+  /*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+  6. Improve media defaults
+*/
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+  7. Remove built-in form typography styles
+*/
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  /*
+  8. Avoid text overflows
+*/
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  /*
+  9. Create a root stacking context
+*/
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+}
