@@ -33,7 +33,7 @@
                 class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
               >
                 <input
-                  v-model="formState.name"
+                  v-model="formState.interest"
                   class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
                   placeholder=""
                 />
@@ -53,7 +53,7 @@
                 class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
               >
                 <input
-                  v-model="formState.name"
+                  v-model="formState.location"
                   class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
                   placeholder=""
                 />
@@ -82,7 +82,6 @@
                 >
               </div>
             </div>
-
             <div class="w-full">
               <label
                 class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
@@ -189,23 +188,23 @@ const errorsMsg = reactive({
 const handleSubmit = async () => {
   loading.value = true;
 
-  // Reset errorsMsg
-  Object.keys(errorsMsg).forEach((key) => {
-    errorsMsg[key] = false;
-  });
+  // // Reset errorsMsg
+  // Object.keys(errorsMsg).forEach((key) => {
+  //   errorsMsg[key] = false;
+  // });
 
-  // Perform validation before submission
-  Object.keys(formState).forEach((key) => {
-    if (!formState[key]) {
-      errorsMsg[key] = true;
-    }
-  });
+  // // Perform validation before submission
+  // Object.keys(formState).forEach((key) => {
+  //   if (!formState[key]) {
+  //     errorsMsg[key] = true;
+  //   }
+  // });
 
-  // Check if there are any errors
-  if (Object.values(errorsMsg).some((error) => error)) {
-    loading.value = false;
-    return;
-  }
+  // // Check if there are any errors
+  // if (Object.values(errorsMsg).some((error) => error)) {
+  //   loading.value = false;
+  //   return;
+  // }
 
   // // Reset errorsMsg
   // Object.keys(errorsMsg).forEach((key) => {

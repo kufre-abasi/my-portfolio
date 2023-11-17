@@ -5,8 +5,11 @@ import { catchAxiosError,catchAxiosSuccess }  from "./Response"
 export const submitWaitlist = async (payload) => {
 
     try {
-        let res = await axios.post(`waitlists?skipFileExceptions=false`,payload,{ 
-        })
+        let res = await axios.post(
+          `rest/collections/waitlists?skipFileExceptions=false`,
+          payload,
+          {}
+        );
         catchAxiosSuccess(res)   
         return res.data;
 
