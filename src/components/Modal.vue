@@ -19,106 +19,108 @@
       </div>
 
       <div v-if="steps[0]">
-        <div class="space-x-6 overflow-y-auto lg:h-auto h-[300px] hide-scrollbar">
-          <div class="grid grid-cols-1 gap-4">
-            <div class="w-full">
-              <label
-                class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
-                >Name or company Name
+        <form class="w-full" @submit.prevent="handleSubmit">
+          <div class="space-x-6 overflow-y-auto lg:h-auto h-[300px] hide-scrollbar">
+            <div class="grid grid-cols-1 gap-4">
+              <div class="w-full">
+                <label
+                  class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
+                  >Name or company Name
 
-                <span class="text-red-600 text-[16px]">*</span></label
-              >
-
-              <div
-                class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
-              >
-                <input
-                  v-model="formState.interest"
-                  class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
-                  placeholder=""
-                />
-
-                <span v-if="errorsMsg.interest" class="error-msg"
-                  >Please enter your interest.</span
+                  <span class="text-red-600 text-[16px]">*</span></label
                 >
+
+                <div
+                  class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
+                >
+                  <input
+                    v-model="formState.name"
+                    class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
+                    placeholder=""
+                  />
+
+                  <span v-if="errorsMsg.name" class="error-msg"
+                    >Please enter your name or company name.</span
+                  >
+                </div>
               </div>
-            </div>
-            <div class="w-full">
-              <label
-                class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
-                >Email <span class="text-red-600 text-[16px]">*</span></label
-              >
-
-              <div
-                class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
-              >
-                <input
-                  v-model="formState.location"
-                  class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
-                  placeholder=""
-                />
-
-                <span v-if="errorsMsg.location" class="error-msg"
-                  >Please enter your location.</span
+              <div class="w-full">
+                <label
+                  class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
+                  >Email <span class="text-red-600 text-[16px]">*</span></label
                 >
+
+                <div
+                  class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
+                >
+                  <input
+                    v-model="formState.email"
+                    class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
+                    placeholder=""
+                  />
+
+                  <span v-if="errorsMsg.email" class="error-msg"
+                    >Please enter your email.</span
+                  >
+                </div>
               </div>
-            </div>
-            <div class="w-full">
-              <label
-                class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
-                >Subject <span class="text-red-600 text-[16px]">*</span></label
-              >
-
-              <div
-                class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
-              >
-                <input
-                  v-model="formState.name"
-                  class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
-                  placeholder=""
-                />
-                <span v-if="errorsMsg.name" class="error-msg"
-                  >Please enter your name.</span
+              <div class="w-full">
+                <label
+                  class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
+                  >Subject <span class="text-red-600 text-[16px]">*</span></label
                 >
+
+                <div
+                  class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
+                >
+                  <input
+                    v-model="formState.subject"
+                    class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
+                    placeholder=""
+                  />
+                  <span v-if="errorsMsg.subject" class="error-msg"
+                    >Please enter your name.</span
+                  >
+                </div>
               </div>
-            </div>
-            <div class="w-full">
-              <label
-                class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
-                >Message <span class="text-red-600 text-[16px]">*</span></label
-              >
-
-              <div
-                class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
-              >
-                <textarea
-                  v-model="formState.role"
-                  class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
-                  placeholder=""
-                />
-                <span v-if="errorsMsg.role" class="error-msg"
-                  >Please enter your role.</span
+              <div class="w-full">
+                <label
+                  class="text-[13.651px] leading-[31.767px] opacity-[0.4986325204372406] text-[#254035] my-3 font-Satoshi500"
+                  >Message <span class="text-red-600 text-[16px]">*</span></label
                 >
+
+                <div
+                  class="p-2 px-3 bg-brand/10 border-[#2540350F] border-[0.853px] rounded-[9px]"
+                >
+                  <textarea
+                    v-model="formState.message"
+                    class="w-full !py-2 outline-none border-none font-Satoshi500 text-[#254035] text-[13px] bg-transparent rounded text-sm"
+                    placeholder=""
+                  />
+                  <span v-if="errorsMsg.message" class="error-msg"
+                    >Please enter your message.</span
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="flex justify-center w-full mt-3">
-          <button
-            :disabled="loading"
-            @click="handleSubmit()"
-            class="bg-brand p-3 mx-auto rounded-full px-10 text-white text-[16px] font-Satoshi400"
-          >
-            <looping-rhombuses-spinner
-              v-if="loading"
-              :animation-duration="2500"
-              :rhombus-size="15"
-              color="#ffffff"
-            />
+          <div class="flex justify-center w-full mt-3">
+            <button
+              :disabled="loading"
+              type="submit"
+              class="bg-brand p-3 mx-auto rounded-full px-10 text-white text-[16px] font-Satoshi400"
+            >
+              <looping-rhombuses-spinner
+                v-if="loading"
+                :animation-duration="2500"
+                :rhombus-size="15"
+                color="#ffffff"
+              />
 
-            <span v-if="!loading">Send</span>
-          </button>
-        </div>
+              <span v-if="!loading">Send</span>
+            </button>
+          </div>
+        </form>
       </div>
       <div v-if="steps[1]">
         <div class="text-center py-[200px]">
@@ -148,6 +150,7 @@ import {
 import { useCountriesStore } from "@/stores/countries";
 import { useWaitlistStore } from "@/stores/waitlist";
 import { storeToRefs } from "pinia";
+import emailjs from "@emailjs/browser";
 
 const countriesStore = useCountriesStore();
 const waitlistStore = useWaitlistStore();
@@ -168,25 +171,68 @@ const closeModal = () => {
   emit("closeModal");
 };
 const formState = reactive({
-  role: "",
-  interest: "",
+  message: "",
+  subject: "",
   name: "",
-  location: "",
   email: "",
-  phoneNo: "",
 });
 const errorsMsg = reactive({
-  role: false,
-  interest: false,
+  message: false,
+  subject: false,
   name: false,
-  location: false,
   email: false,
-  phoneNo: false,
 });
 // const submitted = ref(false);
+const validateForm = () => {
+  // Reset errorsMsg
+  Object.keys(errorsMsg).forEach((key) => {
+    errorsMsg[key] = false;
+  });
 
-const handleSubmit = async () => {
+  // Perform validation before submission
+  let isValid = true;
+
+  if (!formState.email) {
+    errorsMsg.email = true;
+    isValid = false;
+  }
+
+  if (!formState.message) {
+    errorsMsg.message = true;
+    isValid = false;
+  }
+  if (!formState.name) {
+    errorsMsg.name = true;
+    isValid = false;
+  }
+
+  if (!formState.subject) {
+    errorsMsg.subject = true;
+    isValid = false;
+  }
+
+  return isValid; // Only return false if there are validation errors
+};
+
+const clearInputErrors = () => {
+  Object.keys(errorsMsg).forEach((key) => {
+    errorsMsg[key] = false;
+  });
+
+  // Object.keys(errorsMsg).forEach((key) => {
+  //   errorsMsg[key] = "";
+  // });
+};
+
+watch(formState, () => {
+  clearInputErrors();
+});
+const handleSubmit = async (e) => {
   loading.value = true;
+  if (!validateForm()) {
+    loading.value = false;
+    return;
+  }
 
   // // Reset errorsMsg
   // Object.keys(errorsMsg).forEach((key) => {
@@ -221,15 +267,19 @@ const handleSubmit = async () => {
   // });
 
   let payload = {
-    role: formState.role,
-    interest: formState.interest,
-    name: formState.name,
-    location: formState.location,
+    from_name: formState.name,
     email: formState.email,
-    phoneNo: formState.phoneNo,
+    subject: formState.subject,
+    message: formState.message,
   };
   try {
-    const res = await waitlistStore.createWaitlist(payload);
+    emailjs.sendForm(
+      "service_mj9twxa",
+      "template_3zfxfj6",
+      e.target,
+      "udTUt8SyCLDlHBMC5",
+      payload
+    );
     loading.value = false;
 
     // Reset form fields after successful submission

@@ -7,15 +7,17 @@ import SectionFour from "@/components/Section/SectionFour.vue";
 import SectionFive from "@/components/Section/SectionFive.vue";
 import SectionSix from "@/components/Section/SectionSix.vue";
 import Footer from "@/components/Footer.vue";
+import Skils from "@/components/Section/Skils.vue";
 </script>
 <template>
-  <div class="bg-[#E5E5E5]/40 ">
+  <div class="bg-[#E5E5E5]/40">
     <Header />
     <SectionOne />
     <!-- <SectionTwo /> -->
     <!-- <SectionThree /> -->
     <!-- <SectionFour /> -->
     <!-- <SectionFive /> -->
+    <Skils />
     <SectionSix />
     <Footer />
   </div>
