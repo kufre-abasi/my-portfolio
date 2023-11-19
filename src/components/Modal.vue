@@ -278,7 +278,12 @@ const handleSubmit = async (e) => {
       "template_3zfxfj6",
       e.target,
       "udTUt8SyCLDlHBMC5",
-      payload
+      {
+        from_name: formState.name,
+        email: formState.email,
+        subject: formState.subject,
+        message: formState.message,
+      }
     );
     loading.value = false;
 
