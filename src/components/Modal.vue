@@ -273,18 +273,30 @@ const handleSubmit = async (e) => {
     message: formState.message,
   };
   try {
-    emailjs.sendForm(
+    // emailjs.sendForm(
+    //   "service_mj9twxa",
+    //   "template_3zfxfj6",
+    //   e.target,
+    //   "udTUt8SyCLDlHBMC5",
+    //   {
+    //     name: formState.name,
+    //     email: formState.email,
+    //     subject: formState.subject,
+    //     message: formState.message,
+    //   }
+    // );
+    emailjs.send(
       "service_mj9twxa",
       "template_3zfxfj6",
-      e.target,
-      "udTUt8SyCLDlHBMC5",
       {
-        from_name: formState.name,
-        email: formState.email,
         subject: formState.subject,
+        name: formState.name,
+        email: formState.email,
         message: formState.message,
-      }
+      },
+      "udTUt8SyCLDlHBMC5"
     );
+    console.log(payload);
     loading.value = false;
 
     // Reset form fields after successful submission

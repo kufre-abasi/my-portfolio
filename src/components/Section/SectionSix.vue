@@ -293,7 +293,8 @@ const filterTab = (category) => {
           </a>
         </div>
       </div>
-
+      <!--             href="mailto:kufreabasibassey3@gmail.com"
+ -->
       <div class="justify-between w-full hidden mt-3">
         <div>
           <button class="btn-brand rounded-full w-full font-Satoshi400">
