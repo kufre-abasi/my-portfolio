@@ -37,4 +37,4 @@ app.use(Toast, { position: POSITION.BOTTOM_LEFT});
 
 app.mount("#app");
 
-document.title = 'MySpurr';
+document.title = 'Kufre-abasi Bassey';
