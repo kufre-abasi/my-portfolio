@@ -61,7 +61,7 @@ const projects = ref([
     rate: "4.8 Excellent",
     bgColor: "#ffffff",
     project_type: "Brands",
-    url: "https://croxxtalent.com/",
+    url: "https://croxxtalent-staging.netlify.app/",
   },
   {
     logo: KavlrLogo,
