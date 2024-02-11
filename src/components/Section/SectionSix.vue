@@ -49,7 +49,7 @@ const projects = ref([
     rate: "4.8 Awesome",
     bgColor: "#E9FAFB",
     project_type: "Brands",
-    url: "https://myspurr.net/",
+    url: "https://www.myspurr.net/",
   },
   {
     logo: Croxxtalent,
