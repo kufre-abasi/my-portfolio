@@ -38,18 +38,18 @@ const projects = ref([
     project_type: "Brands",
     url: "https://bread-provider.vercel.app/",
   },
-  {
-     logo: zendmart,
-    name: "zendmart",
-   content:
-      "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
-     star: FourStar,
-     user: "Emmanuel R, Founder",
-     rate: "4.5 Excellent",
-     bgColor: "#0E0135",
-     project_type: "Brands",
-     url: "https://www.zendmart.xyz/",
-   },
+ // {
+   //  logo: zendmart,
+   // name: "zendmart",
+   // content:
+     // "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
+   //  star: FourStar,
+   //  user: "Emmanuel R, Founder",
+   //  rate: "4.5 Excellent",
+   //  bgColor: "#0E0135",
+   //  project_type: "Brands",
+   //  url: "https://www.zendmart.xyz/",
+  // },
   {
     logo: MySpurr,
     name: "MySpurr",
