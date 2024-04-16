@@ -26,18 +26,30 @@ const projects = ref([
     project_type: "Brands",
     url: "https://tribinnovafrica.com/",
   },
-  // {
-  //   logo: zendmart,
-  //   name: "zendmart",
-  //   content:
-  //     "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
-  //   star: FourStar,
-  //   user: "Emmanuel R, Founder",
-  //   rate: "4.5 Excellent",
-  //   bgColor: "#0E0135",
-  //   project_type: "Brands",
-  //   url: "",
-  // },
+    {
+    logo: null,
+    name: "Bread Provider",
+    content:
+      "We had a fantastic experience working with MySpurr to find creative talent for our latest brand campaign. Their platform provided us with a diverse pool of talented professionals, and we were able to connect with artists who perfectly aligned with our brand vision.",
+    star: FourStar,
+    user: "Seyi Owolabi, Growth Lead",
+    rate: "4.5 Excellent",
+    bgColor: "#F4F7FA",
+    project_type: "Brands",
+    url: "https://bread-provider.vercel.app/",
+  },
+  {
+     logo: zendmart,
+    name: "zendmart",
+   content:
+      "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
+     star: FourStar,
+     user: "Emmanuel R, Founder",
+     rate: "4.5 Excellent",
+     bgColor: "#0E0135",
+     project_type: "Brands",
+     url: "",
+   },
   {
     logo: MySpurr,
     name: "MySpurr",
