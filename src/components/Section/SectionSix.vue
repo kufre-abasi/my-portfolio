@@ -85,7 +85,7 @@ const projects = ref([
     rate: "4.8 Excellent",
     bgColor: "#2B3C87",
     project_type: "Brands",
-    url: "https://kavlr.io/",
+    url: "https://kavlr.com/",
   },
   {
     logo: Leadfrom,
