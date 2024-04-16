@@ -48,7 +48,7 @@ const projects = ref([
      rate: "4.5 Excellent",
      bgColor: "#0E0135",
      project_type: "Brands",
-     url: "",
+     url: "https://www.zendmart.xyz/",
    },
   {
     logo: MySpurr,
