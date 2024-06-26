@@ -15,17 +15,6 @@ const filteredTab = ref([]);
 
 const projects = ref([
   {
-    logo: TribinnovAfrica,
-    name: "Tribinnov Africa",
-    content:
-      "We had a fantastic experience working with MySpurr to find creative talent for our latest brand campaign. Their platform provided us with a diverse pool of talented professionals, and we were able to connect with artists who perfectly aligned with our brand vision.",
-    star: FourStar,
-    user: "Seyi Owolabi, Growth Lead",
-    rate: "4.5 Excellent",
-    bgColor: "#F4F7FA",
-    project_type: "Brands",
-    url: "https://tribinnovafrica.com/",
-  }, {
     logo: null,
     name: "Tec Ride",
 
@@ -51,18 +40,18 @@ const projects = ref([
     project_type: "Brands",
     url: "https://bread-provider.vercel.app/",
   },
- // {
-   //  logo: zendmart,
-   // name: "zendmart",
-   // content:
-     // "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
-   //  star: FourStar,
-   //  user: "Emmanuel R, Founder",
-   //  rate: "4.5 Excellent",
-   //  bgColor: "#0E0135",
-   //  project_type: "Brands",
-   //  url: "https://www.zendmart.xyz/",
-  // },
+ {
+    logo: zendmart,
+   name: "zendmart",
+   content:
+     "As a growing startup, we were seeking innovative ways to elevate our brand's visual identity. MySpurr came to the rescue with a plethora of skilled designers and illustrators who were just the right fit for our project",
+    star: FourStar,
+    user: "Emmanuel R, Founder",
+    rate: "4.5 Excellent",
+    bgColor: "#0E0135",
+    project_type: "Brands",
+    url: "https://www.zendmart.xyz/",
+  },
   {
     logo: MySpurr,
     name: "MySpurr",
@@ -86,7 +75,7 @@ const projects = ref([
     rate: "4.8 Excellent",
     bgColor: "#ffffff",
     project_type: "Brands",
-    url: "https://croxxtalent-staging.netlify.app/",
+    url: "https://croxxtalent.com/",
   },
   {
     logo: KavlrLogo,
@@ -112,7 +101,18 @@ const projects = ref([
     bgColor: "#ffffff",
     project_type: "Brands",
     url: "https://leadfromdemo.netlify.app/",
-  },
+  },{
+    logo: TribinnovAfrica,
+    name: "Tribinnov Africa",
+    content:
+      "We had a fantastic experience working with MySpurr to find creative talent for our latest brand campaign. Their platform provided us with a diverse pool of talented professionals, and we were able to connect with artists who perfectly aligned with our brand vision.",
+    star: FourStar,
+    user: "Seyi Owolabi, Growth Lead",
+    rate: "4.5 Excellent",
+    bgColor: "#F4F7FA",
+    project_type: "Brands",
+    url: "https://tribinnovafrica.com/",
+  }, 
   {
     logo: null,
     name: "Octupos Clone",
@@ -236,12 +236,14 @@ const filterTab = (category) => {
       </div>
     </div>
     <div class="grid md:grid-cols-4 grid-cols-1 gap-3 my-10">
-      <div
+      <a
         v-for="item in filteredTab"
         :key="item"
         :style="{
           backgroundColor: item.bgColor,
         }"
+        target="_blank"
+        :href="item.url"
         role="button"
         class="text-[#fff] w-full p-6 flex cursor-pointer justify-center shadow-lg items-center rounded-xl"
       >
@@ -262,7 +264,7 @@ const filterTab = (category) => {
             </h3>
           </div>
         </div> -->
-      </div>
+      </a>
     </div>
     <div
       v-if="projects.length && tab == 'ALL'"
