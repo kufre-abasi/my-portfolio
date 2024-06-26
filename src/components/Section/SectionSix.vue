@@ -25,6 +25,17 @@ const projects = ref([
     bgColor: "#F4F7FA",
     project_type: "Brands",
     url: "https://tribinnovafrica.com/",
+  }, {
+    logo: null,
+    name: "Tec Ride",
+
+    content:
+      "MySpurr has been an invaluable resource in our search for creative professionals. Their platform empowered us to find voice over artists who perfectly embodied our brand's personality and vision.",
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+    url: "https://tec-ride.com/",
   },
     {
     logo: null,
@@ -173,6 +184,7 @@ const projects = ref([
     bgColor: "#ffffff",
     url: "https://movie-app-two-puce.vercel.app/",
   },
+  
 ]);
 const toogleModal = () => {
   showModal.value = !showModal.value;
