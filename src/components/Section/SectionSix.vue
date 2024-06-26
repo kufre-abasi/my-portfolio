@@ -36,6 +36,8 @@ const projects = ref([
     rate: "4.8 Excellent",
     bgColor: "#ffffff",
     url: "https://tec-ride.com/",
+        project_type: "Brands",
+
   },
     {
     logo: null,
