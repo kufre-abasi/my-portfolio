@@ -14,6 +14,27 @@ const tab = ref("ALL");
 const filteredTab = ref([]);
 
 const projects = ref([
+{logo:null,
+name:"Zoogla",
+URL:"https://zoogla.co.za/",
+project_type:"Brands",
+content:"",
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+},
+{logo:null,
+name:"Boifiok",
+URL:"https://boifiok.ng/",
+project_type:"Brands",
+content:"",
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+},
+
   {
     logo: null,
     name: "Tec Ride",
