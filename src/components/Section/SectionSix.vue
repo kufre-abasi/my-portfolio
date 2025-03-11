@@ -14,6 +14,7 @@ const tab = ref("ALL");
 const filteredTab = ref([]);
 
 const projects = ref([
+
 {logo:null,
 name:"Zoogla",
 URL:"https://zoogla.co.za/",
@@ -49,6 +50,26 @@ content:"",
         project_type: "Brands",
 
   },
+{logo:null,
+name:"Moovteam",
+URL:"https://moovteam.com/",
+project_type:"Brands",
+content:"",
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+},
+{logo:null,
+name:"Ibom Blockchain Summit",
+URL:"https://ibomblockchainsummit.moovteam.com/",
+project_type:"Brands",
+content:"",
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+},
     {
     logo: null,
     name: "Bread Provider",
