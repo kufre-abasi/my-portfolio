@@ -140,7 +140,7 @@ content:"",
   },
   {
     logo: KavlrLogo,
-    name: "Kavlr.io",
+    name: "Kavlr.io(Gokamba)",
     content:
       "MySpurr has been an invaluable resource in our search for creative professionals. Their platform empowered us to find voice over artists who perfectly embodied our brand's personality and vision.",
     star: FiveStar,
@@ -148,7 +148,7 @@ content:"",
     rate: "4.8 Excellent",
     bgColor: "#2B3C87",
     project_type: "Brands",
-    url: "https://kavlr.com/",
+    url: "https://gokamba.com/",
   },
   {
     logo: Leadfrom,
