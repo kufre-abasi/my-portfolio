@@ -2,7 +2,7 @@
   <div class="py-20 container">
     <div class="flex justify-center">
       <h2
-        class="text-brand text-[43px] lg:text-[56px] leading-[59px] lg:leading-[74px] font-EBGaramond500 mb-8"
+        class="text-white text-[43px] lg:text-[56px] leading-[59px] lg:leading-[74px] font-EBGaramond500 mb-8"
       >
         Tools & Technologies
       </h2>

@@ -27,11 +27,9 @@ const toogleScreenModal = () => {
 };
 </script>
 <template>
-  <div class="sticky top-0 z-30">
+  <div class="sticky top-0 z-30 bg-tranparent">
     <header class="py-8 bg-tranparent">
-      <div
-        class="lg:px-[15px] container flex items-end justify-end font-Satoshi700"
-      >
+      <div class="lg:px-[15px] container flex items-end justify-end font-Satoshi700">
         <div class="hidden lg:w-auto w-full justify-between gap-5">
           <router-link to="/">
             <img
@@ -43,20 +41,16 @@ const toogleScreenModal = () => {
           <button
             role="button"
             @click="toogleModal()"
-            class="bg-brand text-gray-100 px-5 lg:px-8 py-3   rounded-full text-[14px] md:hidden block m-0"
+            class="bg-brand text-gray-100 px-5 lg:px-8 py-3 rounded-full text-[14px] md:hidden block m-0"
           >
             Get early access
           </button>
         </div>
-        <div class="hidden  items-center gap-12">
+        <div class="hidden items-center gap-12">
           <ul class="hidden lg:flex gap-14 text-sm"></ul>
           <div class="flex gap-8">
             <div>
-              <a
-                role="button"
-                class="btn-light"
-                @click="toogleScreenModal()"
-              >
+              <a role="button" class="btn-light" @click="toogleScreenModal()">
                 About Trigon Media
               </a>
             </div>
@@ -67,14 +61,17 @@ const toogleScreenModal = () => {
             </div>
           </div>
         </div>
-                      <div class="justify-end">
-                  <a role="button" target="_blank" href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m" class="btn-brand rounded-full"
-                    > Resume
-                  </a>
-                </div>
-
+        <div class="justify-end">
+          <a
+            role="button"
+            target="_blank"
+            href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m"
+            class="btn-brand rounded-full"
+          >
+            Resume
+          </a>
+        </div>
       </div>
     </header>
-
   </div>
 </template>
