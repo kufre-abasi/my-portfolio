@@ -20,7 +20,7 @@
 
       <div v-if="steps[0]">
         <form class="w-full" @submit.prevent="handleSubmit">
-          <div class="space-x-6 overflow-y-auto lg:h-auto h-[300px] hide-scrollbar">
+          <div class="space-x-6 overflow-y-auto lg:h-auto h-[500px] hide-scrollbar">
             <div class="grid grid-cols-1 gap-4">
               <div class="w-full">
                 <label

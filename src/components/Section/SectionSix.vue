@@ -17,11 +17,36 @@ import techIgnite from "@/assets/techIgnite.svg";
 import zoogla from "@/assets/zoogla.svg";
 import IBS from "@/assets/IBS_050735.DfNe7l6A.png";
 import peakgram from "@/assets/peakgram-logo-black.svg";
+import proxyMed from "@/assets/prxy.jpg";
+import sungaLogo from "@/assets/sunga-logo.png";
+
 const showModal = ref(false);
 const tab = ref("ALL");
 const filteredTab = ref([]);
 
 const projects = ref([
+  {
+    logo: sungaLogo,
+    name: "Sunga Africa ",
+    content: `Sunga makes saving easy and rewarding for every Zambian. We believe financial freedom starts with small, consistent steps that help you stay in control and build confidence along the way`,
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+    project_type: "Brands",
+    url: "https://prxy.health/weight-loss",
+  },
+  {
+    logo: proxyMed,
+    name: "Proxy Med",
+    content: `ProxyMedicine provides telehealth services through licensed medical professionals. `,
+    star: FiveStar,
+    user: "TA, Brand Manager",
+    rate: "4.8 Excellent",
+    bgColor: "#ffffff",
+    project_type: "Brands",
+    url: "https://prxy.health/weight-loss",
+  },
   {
     logo: peakgram,
     name: "Peakgram",
@@ -34,17 +59,17 @@ const projects = ref([
     url: "https://peakgram.com/",
   },
 
-  {
-    logo: zoogla,
-    name: "Zoogla",
-    url: "https://zoogla.co.za/",
-    project_type: "Brands",
-    content: `Zoogla is a fintech company with two primary offerings: a digital banking app and a vehicle finance platform. The app aims to help users manage their finances, track spending, save, and improve their credit score. The vehicle finance platform connects customers, lenders, and dealerships to simplify car financing. `,
-    star: FiveStar,
-    user: "TA, Brand Manager",
-    rate: "4.8 Excellent",
-    bgColor: "#ffffff",
-  },
+  // {
+  //   logo: zoogla,
+  //   name: "Zoogla",
+  //   url: "https://zoogla.co.za/",
+  //   project_type: "Brands",
+  //   content: `Zoogla is a fintech company with two primary offerings: a digital banking app and a vehicle finance platform. The app aims to help users manage their finances, track spending, save, and improve their credit score. The vehicle finance platform connects customers, lenders, and dealerships to simplify car financing. `,
+  //   star: FiveStar,
+  //   user: "TA, Brand Manager",
+  //   rate: "4.8 Excellent",
+  //   bgColor: "#ffffff",
+  // },
   {
     logo: boifiok,
     name: "Boifiok.ng",
@@ -78,17 +103,17 @@ const projects = ref([
     url: "https://tec-ride.com/",
     project_type: "Brands",
   },
-  {
-    logo: techIgnite,
-    name: "Tech ignite By GDGOC",
-    url: "https://www.techignite.live/",
-    project_type: "Brands",
-    content: `Tech Ignite 2025 is a student-focused conference designed to empower the next generation of tech leaders through hands-on learning, networking opportunities, and innovation showcases.`,
-    star: FiveStar,
-    user: "TA, Brand Manager",
-    rate: "4.8 Excellent",
-    bgColor: "#ffffff",
-  },
+  // {
+  //   logo: techIgnite,
+  //   name: "Tech ignite By GDGOC",
+  //   url: "https://www.techignite.live/",
+  //   project_type: "Brands",
+  //   content: `Tech Ignite 2025 is a student-focused conference designed to empower the next generation of tech leaders through hands-on learning, networking opportunities, and innovation showcases.`,
+  //   star: FiveStar,
+  //   user: "TA, Brand Manager",
+  //   rate: "4.8 Excellent",
+  //   bgColor: "#ffffff",
+  // },
   // {
   //   logo: null,
   //   name: "Bread Provider",
@@ -136,17 +161,17 @@ const projects = ref([
     project_type: "Brands",
     url: "https://croxxtalent.com/",
   },
-  {
-    logo: KavlrLogo,
-    name: "Kavlr.io(Gokamba)",
-    content: `Gokamba.com is a platform that offers a variety of financial services, including multicurrency stablecoin accounts, money transfers, and a business current account with a Visa card. It also provides tools for building websites and managing businesses. `,
-    star: FiveStar,
-    user: "TA, Brand Manager",
-    rate: "4.8 Excellent",
-    bgColor: "#2B3C87",
-    project_type: "Brands",
-    url: "https://gokamba.com/",
-  },
+  // {
+  //   logo: KavlrLogo,
+  //   name: "Kavlr.io(Gokamba)",
+  //   content: `Gokamba.com is a platform that offers a variety of financial services, including multicurrency stablecoin accounts, money transfers, and a business current account with a Visa card. It also provides tools for building websites and managing businesses. `,
+  //   star: FiveStar,
+  //   user: "TA, Brand Manager",
+  //   rate: "4.8 Excellent",
+  //   bgColor: "#2B3C87",
+  //   project_type: "Brands",
+  //   url: "https://gokamba.com/",
+  // },
   // {
   //   logo: Leadfrom,
   //   name: "Lead from",
@@ -160,17 +185,17 @@ const projects = ref([
   //   project_type: "Brands",
   //   url: "https://leadfromdemo.netlify.app/",
   // },
-  {
-    logo: TribinnovAfrica,
-    name: "Tribinnov Africa",
-    content: `Tribinnov Africa is a crowdsourced innovation platform and Pan-African ecosystem that aims to accelerate African innovations through scientific research, commercialization, business development, and funding. It's essentially a "Tribe of Innovation" that brings together talents, investors, and industry leaders to create and scale African solutions. `,
-    star: FourStar,
-    user: "Seyi Owolabi, Growth Lead",
-    rate: "4.5 Excellent",
-    bgColor: "#F4F7FA",
-    project_type: "Brands",
-    url: "https://tribinnovafrica.com/",
-  },
+  // {
+  //   logo: TribinnovAfrica,
+  //   name: "Tribinnov Africa",
+  //   content: `Tribinnov Africa is a crowdsourced innovation platform and Pan-African ecosystem that aims to accelerate African innovations through scientific research, commercialization, business development, and funding. It's essentially a "Tribe of Innovation" that brings together talents, investors, and industry leaders to create and scale African solutions. `,
+  //   star: FourStar,
+  //   user: "Seyi Owolabi, Growth Lead",
+  //   rate: "4.5 Excellent",
+  //   bgColor: "#F4F7FA",
+  //   project_type: "Brands",
+  //   url: "https://tribinnovafrica.com/",
+  // },
   // {
   //   logo: null,
   //   name: "Octupos Clone",
@@ -356,11 +381,13 @@ const filterTab = (category) => {
         target="_blank"
         class="group relative bg-[#ebe9f5] h-[40vh] rounded-2xl overflow-hidden border border-gray-800 hover:border-brand/30 transition-all duration-500"
       >
-        <div class="aspect-[4/3] relative h-full overflow-hidden">
+        <div
+          class="aspect-[4/3] mx-auto flex items-center justify-center relative h-full overflow-hidden"
+        >
           <img
             v-if="item.logo"
             :src="item.logo"
-            class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+            class="w-[70%] h-full object-contain transition-transform duration-700 group-hover:scale-110"
           />
           <div
             v-else
