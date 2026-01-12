@@ -34,7 +34,7 @@ const projects = ref([
     rate: "4.8 Excellent",
     bgColor: "#ffffff",
     project_type: "Brands",
-    url: "https://prxy.health/weight-loss",
+    url: "https://sunga.africa/",
   },
   {
     logo: proxyMed,
