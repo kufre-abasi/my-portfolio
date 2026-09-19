@@ -1,133 +1,242 @@
 <template>
-  <div
-    class="flex lg:gap-8 py-14 gap-2 flex-col text-center min-h-screen justify-start relative overflow-hidden bg-[#050b16]"
+  <section
+    id="profile"
+    class="relative min-h-screen py-16 md:py-24 overflow-hidden bg-[#030712] text-white flex flex-col justify-center"
   >
-    <!-- <Header /> -->
+    <!-- Background Cyber Grid & Radiant Ambience -->
+    <div class="absolute inset-0 cyber-grid-bg opacity-30 pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="tech-grid"></div>
-    <div class="pattern-overlay"></div>
-    <div
-      class="flex justify-center bg-black lg:mb-8 mx-auto rounded-full bg-cover lg:h-[350px] lg:w-[350px] w-[200px] h-[200px] profile-container"
-    >
-      <img
-        class="border-8 border-black bg-contain bg-black bg-center rounded-full lg:h-[350px] lg:w-full w-[200px] h-[200px] shadow-sm profile-image"
-        src="@/assets/kufre-pfp.jpeg"
-        alt=""
-      />
+    <div class="container mx-auto px-4 lg:px-8 relative z-10">
+      <!-- Top Telemetry Header -->
+      <div class="flex items-center justify-center gap-3 mb-8">
+        <div class="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent to-cyan-400"></div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/40 border border-cyan-500/30 rounded-none cyber-chamfer-sm text-[11px] font-mono text-cyan-300 tracking-widest uppercase">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          BIOMETRIC IDENTITY // SENIOR ARCHITECT
+        </div>
+        <div class="h-[1px] w-12 md:w-20 bg-gradient-to-l from-transparent to-cyan-400"></div>
+      </div>
+
+      <!-- Main Profile Hero Layout -->
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <!-- Biometric Avatar with Concentric Rotating HUD Reticles -->
+        <div class="relative mb-10 flex items-center justify-center">
+          <!-- Outer Radar Ring -->
+          <div class="absolute -inset-6 md:-inset-8 border border-dashed border-cyan-400/30 rounded-full animate-radar pointer-events-none"></div>
+          
+          <!-- Mid Target Ring -->
+          <div class="absolute -inset-3 md:-inset-4 border-2 border-cyan-500/40 border-t-transparent border-b-transparent rounded-full animate-radar-reverse pointer-events-none"></div>
+          
+          <!-- Glowing Pulse Ring -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 rounded-full blur-md animate-cyber-pulse pointer-events-none"></div>
+
+          <!-- Avatar Container -->
+          <div class="relative w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-cyan-400 bg-slate-900 shadow-[0_0_35px_rgba(0,240,255,0.3)] group">
+            <img
+              class="w-full h-full object-cover grayscale contrast-125 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+              src="@/assets/kufre-pfp.jpeg"
+              alt="Kufre-abasi Bassey"
+            />
+            <!-- Cyber Scanline Overlay across avatar -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 pointer-events-none"></div>
+            <!-- Target crosshair marker -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="w-full h-[1px] bg-cyan-400/40"></div>
+              <div class="h-full w-[1px] bg-cyan-400/40 absolute"></div>
+            </div>
+          </div>
+
+          <!-- Telemetry Badges Floating around avatar -->
+          <div class="hidden sm:flex absolute -left-16 md:-left-24 top-1/4 flex-col items-end gap-1 font-mono text-[10px] text-cyan-400/80 bg-[#070d1a]/80 px-2.5 py-1.5 border border-cyan-500/30 cyber-chamfer-sm backdrop-blur-sm">
+            <span class="text-[8px] text-slate-400 uppercase">SYNAPSE STAT</span>
+            <span class="text-cyan-300 font-bold">ACTIVE // 99.8%</span>
+          </div>
+
+          <div class="hidden sm:flex absolute -right-16 md:-right-24 bottom-1/4 flex-col items-start gap-1 font-mono text-[10px] text-emerald-400/80 bg-[#070d1a]/80 px-2.5 py-1.5 border border-emerald-500/30 cyber-chamfer-sm backdrop-blur-sm">
+            <span class="text-[8px] text-slate-400 uppercase">SYS SPECIALTY</span>
+            <span class="text-emerald-300 font-bold">FRONTEND & MOBILE</span>
+          </div>
+        </div>
+
+        <!-- Name & Primary Title -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-tight text-white mb-4 font-Satoshi900">
+          HI, I'M <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-200 to-cyan-300 glow-cyan">KUFRE-ABASI BASSEY</span>
+        </h1>
+
+        <!-- Role Badge -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-8 px-4 py-2 bg-cyan-950/30 border border-cyan-500/20 text-cyan-300 font-mono text-xs md:text-sm tracking-wider cyber-chamfer-sm">
+          <span class="text-white font-bold">&lt;SENIOR_FRONTEND_ENGINEER&gt;</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-cyan-400 font-bold">&lt;REACT_NATIVE_ENGINEER&gt;</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-emerald-400">&lt;UK/GERMANY_RELOCATION_READY&gt;</span>
+        </div>
+
+        <!-- Tactical Bio Dossier Panel -->
+        <div class="relative w-full text-left bg-[#070d1a]/85 border border-cyan-500/25 p-6 md:p-8 cyber-chamfer shadow-[0_10px_35px_rgba(0,0,0,0.6)] backdrop-blur-md mb-10 cyber-bracket-box">
+          <!-- Card Header Bar -->
+          <div class="flex items-center justify-between pb-4 mb-5 border-b border-cyan-500/15 font-mono text-[11px] text-cyan-400/70">
+            <div class="flex items-center gap-2">
+              <span class="inline-block w-2 h-2 bg-cyan-400"></span>
+              <span>DOSSIER // PROFESSIONAL SUMMARY</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-3 text-slate-400">
+              <span class="text-emerald-400 font-bold">● OPEN TO WORK</span>
+              <span>•</span>
+              <span>EXP: 06+ YRS</span>
+            </div>
+          </div>
+
+          <!-- Dossier Body Text -->
+          <div class="space-y-4 text-slate-300 font-Satoshi400 text-sm md:text-base leading-relaxed">
+            <p>
+              I’m a <strong class="text-white font-Satoshi700">Senior Frontend & React Native Engineer</strong> with 6+ years of hands-on software development experience building production web and mobile products across <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">FINTECH</span>, <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">SAAS</span>, <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">HEALTHCARE</span>, <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">MOBILITY</span>, <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">SOCIAL COMMERCE</span>, and <span class="text-cyan-300 font-mono text-xs px-1.5 py-0.5 bg-cyan-950/60 border border-cyan-500/30 rounded">WEB3</span>.
+            </p>
+            <p>
+              Strong in <strong class="text-white">TypeScript, React, Next.js, React Native</strong>, and <strong class="text-white">Vue / Nuxt</strong>, with ownership across frontend architecture, real-time applications (WebSockets/SSE), complex state management (Redux, Zustand, Pinia), API integrations, and performance-focused interfaces.
+            </p>
+            <p>
+              Experienced in technical leadership, product discovery, and translating offline business operations into scalable digital systems. Experienced working asynchronously with distributed international teams across the US, UK, Netherlands, Zambia, South Africa, and Nigeria to take products from requirements through implementation and release.
+            </p>
+            <p class="text-slate-400 text-xs md:text-sm font-mono pt-2 border-t border-cyan-500/10 flex items-center gap-2">
+              <span class="text-cyan-400">&gt;&gt;</span>
+              <span>B.Sc. Geo-Informatics & Surveying; exploring Bitcoin Core RPC/regtest, Rust, NestJS, and spatial navigation architectures.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Telemetry Stats Matrix -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 w-full mb-10 font-mono">
+          <div class="p-3 bg-[#08101e]/80 border border-cyan-500/20 cyber-chamfer-sm text-left">
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Experience</div>
+            <div class="text-2xl font-bold text-cyan-400">06+ <span class="text-xs font-normal text-slate-400">YRS</span></div>
+            <div class="text-[9px] text-cyan-500/70 mt-0.5">Mobile & Web Dev</div>
+          </div>
+          <div class="p-3 bg-[#08101e]/80 border border-cyan-500/20 cyber-chamfer-sm text-left">
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Deployments</div>
+            <div class="text-2xl font-bold text-emerald-400">12+ <span class="text-xs font-normal text-slate-400">APPS</span></div>
+            <div class="text-[9px] text-emerald-500/70 mt-0.5">Fintech & SaaS</div>
+          </div>
+          <div class="p-3 bg-[#08101e]/80 border border-cyan-500/20 cyber-chamfer-sm text-left">
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Reliability</div>
+            <div class="text-2xl font-bold text-cyan-400">99.9%</div>
+            <div class="text-[9px] text-cyan-500/70 mt-0.5">Production Standard</div>
+          </div>
+          <div class="p-3 bg-[#08101e]/80 border border-cyan-500/20 cyber-chamfer-sm text-left">
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider">Status</div>
+            <div class="text-2xl font-bold text-emerald-400">OPEN</div>
+            <div class="text-[9px] text-emerald-500/70 mt-0.5">Senior / Lead Roles</div>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+          <button
+            @click="toogleScreenModal"
+            class="cyber-btn-primary flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+            </svg>
+            <span>TRANSMIT MESSAGE // COMMS</span>
+          </button>
+
+          <a
+            href="#skills"
+            class="cyber-btn-outline flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>INSPECT ARSENAL // SKILLS</span>
+          </a>
+        </div>
+
+        <!-- Social Telemetry Data Nodes -->
+        <div class="flex flex-col items-center gap-3">
+          <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">// NEURAL LINK CHANNELS //</span>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/kufre-abasi-bassey-692b38212/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 bg-[#0a1426] border border-cyan-500/20 hover:border-cyan-400 text-slate-300 hover:text-cyan-300 font-mono text-xs flex items-center gap-2 cyber-chamfer-sm transition-all duration-300 hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] hover:-translate-y-0.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.96 0-1.74.77-1.74 1.74a1.74 1.74 0 0 0 1.74 1.74c.96 0 1.74-.78 1.74-1.74 0-.97-.78-1.74-1.74-1.74Z"/>
+              </svg>
+              <span>LINKEDIN</span>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/kufre-abasi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 bg-[#0a1426] border border-cyan-500/20 hover:border-cyan-400 text-slate-300 hover:text-cyan-300 font-mono text-xs flex items-center gap-2 cyber-chamfer-sm transition-all duration-300 hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] hover:-translate-y-0.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GITHUB</span>
+            </a>
+
+            <!-- X / Twitter -->
+            <a
+              href="https://twitter.com/kufreabasiBass1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 bg-[#0a1426] border border-cyan-500/20 hover:border-cyan-400 text-slate-300 hover:text-cyan-300 font-mono text-xs flex items-center gap-2 cyber-chamfer-sm transition-all duration-300 hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] hover:-translate-y-0.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span>X // TWITTER</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.link/x477i5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 bg-[#0a1426] border border-cyan-500/20 hover:border-emerald-400 text-slate-300 hover:text-emerald-300 font-mono text-xs flex items-center gap-2 cyber-chamfer-sm transition-all duration-300 hover:shadow-[0_0_12px_rgba(0,255,157,0.3)] hover:-translate-y-0.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/>
+              </svg>
+              <span>WHATSAPP</span>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/basseykufreabasi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 bg-[#0a1426] border border-cyan-500/20 hover:border-cyan-400 text-slate-300 hover:text-cyan-300 font-mono text-xs flex items-center gap-2 cyber-chamfer-sm transition-all duration-300 hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] hover:-translate-y-0.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>INSTAGRAM</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <h1
-      class="md:text-[60px] container uppercase text-[34px] font-bold text-white md:leading-[69.76px] leading-[45px] font-EBGaramond500 title-animation"
-    >
-      Hi, I'm kufre-abasi Bassey
-    </h1>
-    <p class="text-[18px] container font-Satoshi400 description-animation text-gray-300">
-      a dedicated Software Engineer with a focus on front-end development. I'm passionate
-      about building clean, interactive user interfaces and continuously exploring the
-      evolving world of web technologies. My journey in tech has been shaped by a deep
-      curiosity and a commitment to bridging the gap between user experience and secure,
-      scalable systems.
-    </p>
-    <div class="flex gap-2 items-center justify-center text-neon social-icons">
-      <a
-        href="https://www.instagram.com/basseykufreabasi/"
-        target="_blank"
-        role="button"
-        class="social-icon"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 134 134"
-          fill="none"
-        >
-          <path
-            d="M66.5369 0C48.4665 0 46.2006 0.0766603 39.1037 0.400337C32.0216 0.723419 27.1849 1.84836 22.9525 3.4929C18.5771 5.19329 14.8665 7.46853 11.1676 11.1674C7.46853 14.8663 5.19329 18.5773 3.49309 22.9527C1.84817 27.1849 0.723617 32.0216 0.400139 39.1037C0.0764622 46.2006 0 48.4665 0 66.5369C0 84.607 0.0764622 86.8729 0.400139 93.9698C0.723617 101.052 1.84817 105.889 3.49309 110.121C5.19349 114.496 7.46873 118.207 11.1676 121.906C14.8667 125.605 18.5771 127.88 22.9525 129.581C27.1849 131.225 32.0216 132.35 39.1037 132.673C46.2006 132.997 48.4665 133.074 66.5369 133.074C84.607 133.074 86.8729 132.997 93.9698 132.673C101.052 132.35 105.889 131.225 110.121 129.581C114.496 127.88 118.207 125.605 121.906 121.906C125.605 118.207 127.88 114.496 129.581 110.121C131.225 105.889 132.35 101.052 132.673 93.9698C132.997 86.8729 133.074 84.607 133.074 66.5369C133.074 48.4665 132.997 46.2006 132.673 39.1037C132.35 32.0216 131.225 27.1849 129.581 22.9527C127.88 18.5773 125.605 14.8663 121.906 11.1674C118.207 7.46853 114.496 5.19329 110.121 3.4929C105.889 1.84836 101.052 0.723419 93.9698 0.400337C86.8729 0.0766603 84.607 0 66.5369 0ZM66.5369 11.9885C84.3027 11.9885 86.4072 12.0565 93.4233 12.3766C99.9107 12.6723 103.434 13.7563 105.778 14.6675C108.884 15.8746 111.101 17.3163 113.429 19.6446C115.757 21.973 117.199 24.1896 118.406 27.2952C119.317 29.6398 120.401 33.163 120.697 39.6502C121.017 46.6663 121.085 48.7708 121.085 66.5368C121.085 84.3027 121.017 86.4072 120.697 93.4233C120.401 99.9107 119.317 103.434 118.406 105.778C117.199 108.884 115.757 111.101 113.429 113.429C111.101 115.757 108.884 117.199 105.778 118.406C103.434 119.317 99.9105 120.401 93.4233 120.697C86.4084 121.017 84.3041 121.085 66.5368 121.085C48.7694 121.085 46.6655 121.017 39.6502 120.697C33.1628 120.401 29.6398 119.317 27.2954 118.406C24.1894 117.199 21.973 115.757 19.6448 113.429C17.3165 111.101 15.8746 108.884 14.6675 105.778C13.7563 103.434 12.6725 99.9105 12.3766 93.4233C12.0565 86.4072 11.9885 84.3027 11.9885 66.5368C11.9885 48.7708 12.0565 46.6663 12.3766 39.6502C12.6725 33.1628 13.7563 29.6398 14.6675 27.2954C15.8746 24.1894 17.3165 21.973 19.6446 19.6448C21.973 17.3163 24.1896 15.8746 27.2952 14.6675C29.6398 13.7563 33.163 12.6723 39.6502 12.3766C46.6663 12.0565 48.7708 11.9885 66.5368 11.9885"
-            fill="#ffffff"
-          />
-          <path
-            d="M66.537 88.7157C54.2876 88.7157 44.3578 78.7859 44.3578 66.5369C44.3578 54.2875 54.2876 44.3577 66.537 44.3577C78.786 44.3577 88.7157 54.2875 88.7157 66.5369C88.7157 78.7859 78.786 88.7157 66.537 88.7157ZM66.537 32.3692C47.6664 32.3692 32.3693 47.6664 32.3693 66.5369C32.3693 85.407 47.6664 100.704 66.537 100.704C85.4071 100.704 100.704 85.407 100.704 66.5369C100.704 47.6664 85.4071 32.3692 66.537 32.3692ZM110.039 31.0193C110.039 35.4291 106.464 39.0036 102.054 39.0036C97.6448 39.0036 94.0699 35.4291 94.0699 31.0193C94.0699 26.6096 97.6448 23.0347 102.054 23.0347C106.464 23.0347 110.039 26.6096 110.039 31.0193Z"
-            fill="#ffffff"
-          />
-        </svg>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/kufre-abasi-bassey-692b38212/"
-        target="_blank"
-        role="button"
-        class="social-icon"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M21 4.32353V19.6765C21 20.0275 20.8606 20.3641 20.6123 20.6123C20.3641 20.8606 20.0275 21 19.6765 21H4.32353C3.97251 21 3.63586 20.8606 3.38765 20.6123C3.13944 20.3641 3 20.0275 3 19.6765V4.32353C3 3.97251 3.13944 3.63586 3.38765 3.38765C3.63586 3.13944 3.97251 3 4.32353 3H19.6765C20.0275 3 20.3641 3.13944 20.6123 3.38765C20.8606 3.63586 21 3.97251 21 4.32353ZM8.29412 9.88235H5.64706V18.3529H8.29412V9.88235ZM8.53235 6.97059C8.53375 6.77036 8.49569 6.57182 8.42035 6.3863C8.34502 6.20078 8.23387 6.03191 8.09328 5.88935C7.95268 5.74678 7.78537 5.6333 7.60091 5.5554C7.41646 5.47749 7.21846 5.43668 7.01824 5.43529H6.97059C6.5634 5.43529 6.17289 5.59705 5.88497 5.88497C5.59705 6.17289 5.43529 6.5634 5.43529 6.97059C5.43529 7.37777 5.59705 7.76828 5.88497 8.05621C6.17289 8.34413 6.5634 8.50588 6.97059 8.50588C7.17083 8.51081 7.37008 8.47623 7.55696 8.40413C7.74383 8.33202 7.91467 8.2238 8.0597 8.08565C8.20474 7.94749 8.32113 7.78212 8.40223 7.59897C8.48333 7.41582 8.52755 7.21848 8.53235 7.01824V6.97059ZM18.3529 13.2071C18.3529 10.6606 16.7329 9.67059 15.1235 9.67059C14.5966 9.6442 14.0719 9.75644 13.6019 9.9961C13.1318 10.2358 12.7328 10.5945 12.4447 11.0365H12.3706V9.88235H9.88235V18.3529H12.5294V13.8476C12.4911 13.3862 12.6365 12.9283 12.9339 12.5735C13.2313 12.2186 13.6567 11.9954 14.1176 11.9524H14.2182C15.06 11.9524 15.6847 12.4818 15.6847 13.8159V18.3529H18.3318L18.3529 13.2071Z"
-            fill="#ffffff"
-          />
-        </svg>
-      </a>
-      <a href="https://twitter.com/kufreabasiBass1" class="social-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="#1a1a1a"
-        >
-          <path
-            d="M24.3253 3H28.736L19.1 14.0133L30.436 29H21.56L14.608 19.9107L6.65333 29H2.24L12.5467 17.22L1.672 3H10.7733L17.0573 11.308L24.3253 3ZM22.7773 26.36H25.2213L9.44533 5.50133H6.82266L22.7773 26.36Z"
-            fill="#ffffff"
-          /></svg
-      ></a>
-      <a
-        href="https://github.com/kufre-abasi"
-        target="_blank"
-        role="button"
-        class="social-icon"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M12 2.24669C6.475 2.24669 2 6.72169 2 12.2467C2 16.6717 4.8625 20.4092 8.8375 21.7342C9.3375 21.8217 9.525 21.5217 9.525 21.2592C9.525 21.0217 9.5125 20.2342 9.5125 19.3967C7 19.8592 6.35 18.7842 6.15 18.2217C6.0375 17.9342 5.55 17.0467 5.125 16.8092C4.775 16.6217 4.275 16.1592 5.1125 16.1467C5.9 16.1342 6.4625 16.8717 6.65 17.1717C7.55 18.6842 8.9875 18.2592 9.5625 17.9967C9.65 17.3467 9.9125 16.9092 10.2 16.6592C7.975 16.4092 5.65 15.5467 5.65 11.7217C5.65 10.6342 6.0375 9.73419 6.675 9.03419C6.575 8.78419 6.225 7.75919 6.775 6.38419C6.775 6.38419 7.6125 6.12169 9.525 7.40919C10.325 7.18419 11.175 7.07169 12.025 7.07169C12.875 7.07169 13.725 7.18419 14.525 7.40919C16.4375 6.10919 17.275 6.38419 17.275 6.38419C17.825 7.75919 17.475 8.78419 17.375 9.03419C18.0125 9.73419 18.4 10.6217 18.4 11.7217C18.4 15.5592 16.0625 16.4092 13.8375 16.6592C14.2 16.9717 14.5125 17.5717 14.5125 18.5092C14.5125 19.8467 14.5 20.9217 14.5 21.2592C14.5 21.5217 14.6875 21.8342 15.1875 21.7342C17.1727 21.064 18.8977 19.7882 20.1198 18.0862C21.3419 16.3843 21.9995 14.3419 22 12.2467C22 6.72169 17.525 2.24669 12 2.24669Z"
-            fill="#ffffff"
-          />
-        </svg>
-      </a>
-      <a href="https://wa.link/x477i5" target="_blank" role="button" class="social-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M12.0377 3.29034C7.09761 3.29034 3.07723 7.16267 3.07548 11.9216C3.07432 13.4435 3.48774 14.9288 4.27161 16.237L3 20.7097L7.75142 19.5095C9.07309 20.2009 10.5427 20.5615 12.0343 20.5605H12.0377C16.9779 20.5605 20.9983 16.6876 21 11.9286C21.0012 9.62344 20.0698 7.45357 18.3772 5.82254C16.6852 4.19093 14.4352 3.29092 12.0377 3.29034ZM12.0377 19.1025H12.0348C10.6982 19.1025 9.3871 18.7564 8.24323 18.1026L7.97032 17.947L5.15187 18.6589L5.90439 16.0111L5.72729 15.74C4.98343 14.6055 4.58745 13.2783 4.58806 11.9216C4.58981 7.9657 7.932 4.74834 12.0406 4.74834C14.0299 4.74892 15.9002 5.49622 17.3071 6.85202C18.714 8.20783 19.488 10.0107 19.4868 11.928C19.4851 15.884 16.1435 19.1025 12.0372 19.1025H12.0377ZM16.1237 13.7286C15.8996 13.6212 14.7987 13.0992 14.5932 13.0266C14.3882 12.9552 14.239 12.918 14.0897 13.134C13.9411 13.35 13.5114 13.836 13.3814 13.9794C13.2501 14.1234 13.1195 14.1409 12.8954 14.0334C12.6712 13.9254 11.9495 13.6978 11.0948 12.9627C10.4288 12.3914 9.97935 11.6853 9.84871 11.4687C9.71806 11.2533 9.83477 11.1366 9.94684 11.0292C10.0473 10.9334 10.171 10.7778 10.2825 10.6518C10.3939 10.5258 10.4311 10.4358 10.5066 10.2918C10.5809 10.1483 10.5437 10.0218 10.4874 9.91434C10.4311 9.80576 9.984 8.74434 9.79645 8.31292C9.61529 7.89254 9.43064 7.94886 9.29303 7.94189C9.16239 7.93609 9.01374 7.93434 8.86335 7.93434C8.71529 7.93434 8.472 7.98834 8.26645 8.20434C8.06148 8.42034 7.48258 8.94176 7.48258 10.0032C7.48258 11.0652 8.28503 12.0906 8.3971 12.2346C8.50916 12.378 9.97645 14.5572 12.223 15.492C12.7572 15.7132 13.1741 15.8462 13.4998 15.9461C14.0363 16.1104 14.5246 16.0866 14.9102 16.0314C15.3399 15.9693 16.2352 15.51 16.421 15.0066C16.608 14.5032 16.608 14.0712 16.5523 13.9812C16.4977 13.8912 16.3479 13.8372 16.1237 13.7286Z"
-            fill="#ffffff"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
+    <!-- Comms Modal -->
+    <Modal @closeModal="toogleScreenModal" v-if="showcreenModal" />
+  </section>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import Header from "@/components/Header.vue";
-
-import VidoeModal from "@/components/VideoModal.vue";
+import { ref } from "vue";
+import Modal from "@/components/Modal.vue";
 
 const showcreenModal = ref(false);
 
@@ -135,124 +244,3 @@ const toogleScreenModal = () => {
   showcreenModal.value = !showcreenModal.value;
 };
 </script>
-
-<style>
-.dark-tech-bg {
-  background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
-  position: relative;
-}
-
-.tech-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(64, 169, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(64, 169, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
-  background-position: center center;
-  z-index: 0;
-  opacity: 0.3;
-}
-
-.pattern-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(
-      circle at 25px 25px,
-      rgba(64, 169, 255, 0.1) 2%,
-      transparent 0%
-    ),
-    radial-gradient(circle at 75px 75px, rgba(64, 169, 255, 0.1) 2%, transparent 0%);
-  background-size: 100px 100px;
-  z-index: 0;
-  opacity: 0.4;
-}
-
-.profile-container {
-  animation: fadeInDown 1s ease-out;
-  position: relative;
-  z-index: 1;
-}
-
-.profile-image {
-  transition: all 0.3s ease;
-  /* border-color: #40a9ff; */
-}
-
-.profile-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(64, 169, 255, 0.3);
-}
-
-.title-animation {
-  animation: fadeInUp 1s ease-out 0.5s both;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 0 10px rgba(64, 169, 255, 0.3);
-}
-
-.description-animation {
-  animation: fadeInUp 1s ease-out 1s both;
-  position: relative;
-  z-index: 1;
-}
-
-.social-icons {
-  animation: fadeInUp 1s ease-out 1.5s both;
-  position: relative;
-  z-index: 1;
-}
-
-.social-icon {
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: translateY(-5px);
-  filter: drop-shadow(0 0 8px rgba(64, 169, 255, 0.5));
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-:root {
-  --neon-color: #40a9ff;
-  --dark-accent: #050b16;
-}
-
-.text-neon {
-  color: var(--neon-color);
-}
-
-.bg-dark-accent {
-  background-color: var(--dark-accent);
-}
-
-.shadow-neon {
-  box-shadow: 0 0 15px rgba(64, 169, 255, 0.2);
-}
-</style>

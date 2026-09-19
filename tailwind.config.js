@@ -3,13 +3,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Satoshi400: ["Satoshi-Regular"],
-        Satoshi500: ["Satoshi-Medium"],
-        Satoshi700: ["Satoshi-Bold"],
-        Satoshi900: ["Satoshi-Black"],
+        Satoshi400: ["Satoshi-Regular", "sans-serif"],
+        Satoshi500: ["Satoshi-Medium", "sans-serif"],
+        Satoshi700: ["Satoshi-Bold", "sans-serif"],
+        Satoshi900: ["Satoshi-Black", "sans-serif"],
 
-        EBGaramond600: ["EBGaramond-Medium"],
-        EBGaramond500: ["EBGaramond-Regular"],
+        EBGaramond600: ["EBGaramond-Medium", "serif"],
+        EBGaramond500: ["EBGaramond-Regular", "serif"],
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
       colors: {
         primary: {
@@ -20,10 +30,28 @@ module.exports = {
         brand: "#1a1a1a",
         secondary: {
           main: "#00AFEF8A",
-          // light: "var(--color-secondary-light)",
-          // dark: "var(--color-secondary-dark)",
-          // contrastText: "var(--color-secondary-contrastText)",
         },
+        cyborg: {
+          bg: "#030712",
+          surface: "#070c18",
+          card: "#0d1527",
+          cardHover: "#111d35",
+          border: "rgba(0, 240, 255, 0.18)",
+          borderHover: "rgba(0, 240, 255, 0.55)",
+          cyan: "#00f0ff",
+          cyanDim: "#00b4d8",
+          emerald: "#00ff9d",
+          crimson: "#ff0055",
+          amber: "#ffb700",
+          steel: "#8fa3bf",
+          muted: "#51637c",
+        },
+      },
+      boxShadow: {
+        "cyan-glow": "0 0 25px rgba(0, 240, 255, 0.35)",
+        "cyan-sm": "0 0 12px rgba(0, 240, 255, 0.25)",
+        "emerald-glow": "0 0 25px rgba(0, 255, 157, 0.35)",
+        "card-cyber": "0 4px 25px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 240, 255, 0.12)",
       },
       utilities: {
         ".tick": {
