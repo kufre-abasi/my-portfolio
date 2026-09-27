@@ -7,12 +7,15 @@ import Croxxtalent from "@/assets/croxxtalent.png";
 import Hivvy_NEW_LOGO from "@/assets/Hivvy_NEW_LOGO.svg";
 import boifiok from "@/assets/boifiok.svg";
 import TechRideLogo from "@/assets/TechRide-Logo.DufkOsa_.svg";
-import peakgram from "@/assets/peakgram-logo-black.svg";
+import peakgram from "@/assets/peakgram-logo-white.svg";
 import proxyMed from "@/assets/prxy.jpg";
 import sungaLogo from "@/assets/sunga-logo.png";
 import zoogla from "@/assets/zoogla.svg";
 import tribinnovAfrica from "@/assets/tribinnovAfrica.png";
 import KavlrLogo from "@/assets/img/kavlr_Logo.svg";
+import workremitsLogo from "@/assets/workremits-logo.svg";
+import fajiriLogo from "@/assets/fajiri-logo.png";
+import geogridLogo from "@/assets/geogrid-logo.svg";
 
 const showModal = ref(false);
 const activeFilter = ref("ALL");
@@ -23,8 +26,11 @@ const toggleModal = () => {
 
 // Brands & Partners telemetry strip
 const brands = [
+  { name: "WorkRemits", location: "London, UK", role: "Frontend Engineer (Contract)", logo: workremitsLogo },
   { name: "Hivvy Inc.", location: "United States", role: "Co-Founder & Software Engineer", logo: Hivvy_NEW_LOGO },
   { name: "Sunga Africa", location: "Zambia", role: "Frontend & Mobile Engineer", logo: sungaLogo },
+  { name: "Peakgram", location: "Remote // Global", role: "Frontend Engineer (Contract)", logo: peakgram },
+  { name: "Fajiri Foundation", location: "Canada // Nigeria", role: "Lead Frontend Engineer", logo: fajiriLogo },
   { name: "Proxy Med", location: "London, UK", role: "Senior Frontend Engineer", logo: proxyMed },
   { name: "Boifiok.ng", location: "Nigeria", role: "CTO & Lead Engineer", logo: boifiok },
   { name: "One Goal Technologies", location: "Remote", role: "Frontend & Mobile Consultant", logo: null },
@@ -34,14 +40,6 @@ const brands = [
   { name: "Gokamba", location: "London, UK", role: "Frontend Web Developer", logo: KavlrLogo },
   { name: "MySpurr", location: "Nigeria", role: "Frontend Web Developer", logo: MySpurr },
   { name: "Tribinnov Africa", location: "Nigeria", role: "Frontend Web Developer", logo: tribinnovAfrica },
-];
-
-const filterTabs = [
-  { id: "ALL", label: "ALL MISSIONS", count: "12" },
-  { id: "FINTECH", label: "FINTECH & WEB3", count: "04" },
-  { id: "MOBILE", label: "MOBILE (REACT NATIVE)", count: "03" },
-  { id: "SAAS", label: "SAAS & PLATFORMS", count: "03" },
-  { id: "HEALTH_COMMERCE", label: "HEALTH & COMMERCE", count: "02" },
 ];
 
 const projects = ref([
@@ -61,6 +59,20 @@ const projects = ref([
   },
   {
     id: "02",
+    name: "WorkRemits",
+    role: "Senior Frontend Engineer (Contract)",
+    timeline: "2024 - PRESENT",
+    location: "London, UK // Remote",
+    category: "FINTECH",
+    tag: "GLOBAL PAYROLL // EOR & PEO // MULTI-CURRENCY",
+    status: "ACTIVE OPERATION",
+    logo: workremitsLogo,
+    content: "Architected core enterprise frontend modules for a multi-currency global payroll, invoicing, and Employer of Record (EOR/PEO) platform. Engineered the statutory tax deduction & payroll calculation engine across African and international jurisdictions (PAYE, NAPSA, NHIMA, SDL), automated multi-currency contractor disbursement flows, Money Request approval workflows, and interactive salary summaries.",
+    tech: ["React", "TypeScript", "Redux Toolkit", "Vite", "Tailwind CSS", "REST APIs", "TanStack Table", "Framer Motion"],
+    url: "https://workremits.com/",
+  },
+  {
+    id: "03",
     name: "Sunga Africa",
     role: "Frontend / Mobile Engineer (Contract)",
     timeline: "NOV 2025 - PRESENT",
@@ -74,7 +86,7 @@ const projects = ref([
     url: "https://sunga.africa/",
   },
   {
-    id: "03",
+    id: "04",
     name: "One Goal Technologies (SocialStore)",
     role: "Frontend & Mobile Engineer (Consulting)",
     timeline: "FEB 2026 - PRESENT",
@@ -88,7 +100,7 @@ const projects = ref([
     url: "https://getsocialstore.com",
   },
   {
-    id: "04",
+    id: "05",
     name: "Boifiok.ng",
     role: "Chief Technology Officer & Lead Engineer",
     timeline: "DEC 2024 - PRESENT",
@@ -102,7 +114,49 @@ const projects = ref([
     url: "https://boifiok.ng/",
   },
   {
-    id: "05",
+    id: "06",
+    name: "GeoGrid Campus",
+    role: "Creator & Lead Architect (Side Quest)",
+    timeline: "2026 // SIDE QUEST",
+    location: "Global // Web Application",
+    category: "SIDE_QUEST",
+    tag: "GEOSPATIAL // SMART CAMPUS // WAYFINDING",
+    status: "LIVE PRODUCTION",
+    logo: geogridLogo,
+    content: "Built an intelligent campus navigation and smart-grid geocoding web platform. Implemented natural language spatial search, turn-by-turn walking directions for campus buildings and multi-floor offices, a full-featured GeoJSON map editor to draw and calibrate points, boundary lines, and 2D building polygons, and administrative tools for bulk campus spreadsheet imports.",
+    tech: ["React", "TypeScript", "Vite", "GeoJSON", "Mapbox / Leaflet", "TanStack Router", "Tailwind CSS"],
+    url: "https://campus-grid-nav.lovable.app/",
+  },
+  {
+    id: "07",
+    name: "Peakgram",
+    role: "Frontend Engineer (Contract)",
+    timeline: "2024 - PRESENT",
+    location: "Remote // Global",
+    category: "SAAS",
+    tag: "CREATIVE AGENCY // DESIGN SYSTEMS // WEB APPS",
+    status: "LIVE PRODUCTION",
+    logo: peakgram,
+    content: "Delivered modern, high-performance web applications and digital agency experiences for Peakgram. Built interactive product showcase landing pages for flagship client products (including Hivvy, Blockroll, and HashIT), custom 3D animation showreels, and dynamic marketing flows engineered for smooth responsiveness, SEO optimization, and sub-second load times.",
+    tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Video/3D", "REST APIs"],
+    url: "https://peakgram.com/",
+  },
+  {
+    id: "08",
+    name: "Fajiri Foundation",
+    role: "Lead Frontend Engineer (Contract)",
+    timeline: "2024 - PRESENT",
+    location: "British Columbia, CA // Abuja, NG",
+    category: "HEALTH_COMMERCE",
+    tag: "GLOBAL CHARITY // DONATION ENGINE // RELIEF PORTAL",
+    status: "LIVE PRODUCTION",
+    logo: fajiriLogo,
+    content: "Architected the public digital platform and member portal for The Fajiri Family Relief Foundation (Canadian Registered Charity #722772027RR0001). Built international donation flows, multi-language localization (EN/FR), interactive humanitarian campaign trackers across education, healthcare, and emergency relief, and member onboarding portals for global African diaspora communities.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Cloudinary", "Internationalization", "REST APIs"],
+    url: "https://fajiri.org/",
+  },
+  {
+    id: "09",
     name: "Demz Aminytics / Proxy Med",
     role: "Senior Frontend Engineer",
     timeline: "JUN 2025 - AUG 2025",
@@ -116,7 +170,7 @@ const projects = ref([
     url: "https://prxy.health/weight-loss",
   },
   {
-    id: "06",
+    id: "10",
     name: "Tec-Ride B.V.",
     role: "Frontend Engineer (Contract)",
     timeline: "MAR 2024 - DEC 2024",
@@ -130,7 +184,7 @@ const projects = ref([
     url: "https://tec-ride.com/",
   },
   {
-    id: "07",
+    id: "11",
     name: "CroxxTalent",
     role: "Frontend Engineer",
     timeline: "JUN 2023 - DEC 2025",
@@ -144,7 +198,7 @@ const projects = ref([
     url: "https://croxxtalent.com/",
   },
   {
-    id: "08",
+    id: "12",
     name: "Leofolio (Aleo Blockchain)",
     role: "Core Developer & Blockchain Architect",
     timeline: "ALEO CODESPRINT V3 (3RD PLACE)",
@@ -158,7 +212,7 @@ const projects = ref([
     url: "https://github.com/kufre-abasi",
   },
   {
-    id: "09",
+    id: "13",
     name: "Zoogla",
     role: "Support Frontend Developer",
     timeline: "OCT 2024 - DEC 2024",
@@ -172,7 +226,7 @@ const projects = ref([
     url: "https://zoogla.co.za/",
   },
   {
-    id: "10",
+    id: "14",
     name: "MySpurr",
     role: "Frontend Web Developer",
     timeline: "JUL 2023 - JUN 2024",
@@ -186,7 +240,7 @@ const projects = ref([
     url: "https://www.myspurr.net/",
   },
   {
-    id: "11",
+    id: "15",
     name: "Gokamba (Kavlr)",
     role: "Frontend Web Developer",
     timeline: "FEB 2023 - JUN 2023",
@@ -200,7 +254,7 @@ const projects = ref([
     url: "https://gokamba.com/",
   },
   {
-    id: "12",
+    id: "16",
     name: "Tribinnov Africa",
     role: "Frontend Web Developer",
     timeline: "APR 2022 - JAN 2024",
@@ -213,6 +267,15 @@ const projects = ref([
     tech: ["Vue.js", "JavaScript", "TypeScript", "Pinia", "REST APIs"],
     url: "https://tribinnovafrica.com/",
   },
+]);
+
+const filterTabs = computed(() => [
+  { id: "ALL", label: "ALL MISSIONS", count: String(projects.value.length).padStart(2, "0") },
+  { id: "FINTECH", label: "FINTECH & WEB3", count: String(projects.value.filter((p) => p.category === "FINTECH").length).padStart(2, "0") },
+  { id: "SAAS", label: "SAAS & PLATFORMS", count: String(projects.value.filter((p) => p.category === "SAAS").length).padStart(2, "0") },
+  { id: "MOBILE", label: "MOBILE (REACT NATIVE)", count: String(projects.value.filter((p) => p.category === "MOBILE").length).padStart(2, "0") },
+  { id: "HEALTH_COMMERCE", label: "HEALTH & SOCIAL IMPACT", count: String(projects.value.filter((p) => p.category === "HEALTH_COMMERCE").length).padStart(2, "0") },
+  { id: "SIDE_QUEST", label: "SIDE QUESTS & LABS", count: String(projects.value.filter((p) => p.category === "SIDE_QUEST").length).padStart(2, "0") },
 ]);
 
 const filteredProjects = computed(() => {
@@ -241,17 +304,17 @@ const filteredProjects = computed(() => {
         </h2>
 
         <p class="text-slate-400 max-w-2xl text-sm md:text-base font-Satoshi400 leading-relaxed mb-8">
-          Extensive engineering track record spanning United States, UK, Netherlands, Zambia, South Africa, and Nigeria. Building high-availability fintech, real-time analytics, mobile apps, and Web3 architectures.
+          Extensive engineering track record spanning United States, UK, Canada, Netherlands, Zambia, South Africa, and Nigeria. Building high-availability fintech, global payroll engines, real-time analytics, mobile apps, and Web3 architectures.
         </p>
 
         <!-- Brands & Organizations Telemetry Matrix -->
         <div class="w-full max-w-5xl mb-12 p-4 sm:p-6 bg-[#060d1b]/90 border border-cyan-500/25 cyber-chamfer backdrop-blur-md">
           <div class="text-[10px] font-mono text-cyan-400/80 uppercase tracking-widest text-left mb-4 flex items-center justify-between">
             <span>[ CLIENTS & ORGANIZATIONS TELEMETRY NETWORK ]</span>
-            <span class="text-emerald-400">11+ GLOBAL PARTNERS</span>
+            <span class="text-emerald-400">{{ brands.length }}+ GLOBAL PARTNERS</span>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
             <div
               v-for="brand in brands"
               :key="brand.name"
@@ -262,7 +325,10 @@ const filteredProjects = computed(() => {
                   v-if="brand.logo"
                   :src="brand.logo"
                   :alt="brand.name"
-                  class="max-h-7 max-w-[80%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  :class="[
+                    'max-h-7 max-w-[80%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300',
+                    brand.name === 'Fajiri Foundation' ? 'bg-white/10 px-2 py-0.5 rounded' : ''
+                  ]"
                 />
                 <span v-else class="text-cyan-400 font-mono text-xs font-bold tracking-tighter">
                   &lt;{{ brand.name.slice(0, 4) }}/&gt;
@@ -327,7 +393,10 @@ const filteredProjects = computed(() => {
                 v-if="item.logo"
                 :src="item.logo"
                 :alt="item.name"
-                class="max-h-20 max-w-[70%] object-contain relative z-10 filter drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-110"
+                :class="[
+                  'max-h-20 max-w-[70%] object-contain relative z-10 filter drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-110',
+                  item.name === 'Fajiri Foundation' ? 'bg-white/15 px-4 py-2 rounded-lg backdrop-blur-sm' : ''
+                ]"
               />
               <div v-else class="text-white font-mono font-bold text-2xl relative z-10 flex flex-col items-center gap-1">
                 <span class="text-cyan-400 text-sm font-normal">&lt;SYSTEM_PROJECT&gt;</span>
