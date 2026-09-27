@@ -3,6 +3,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        serif: ['"Instrument Serif"', '"EBGaramond-Medium"', 'Georgia', 'serif'],
+        sans: ['"Inter"', '"Satoshi-Regular"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['"Instrument Serif"', '"EBGaramond-Medium"', 'Georgia', 'serif'],
         Satoshi400: ["Satoshi-Regular", "sans-serif"],
         Satoshi500: ["Satoshi-Medium", "sans-serif"],
         Satoshi700: ["Satoshi-Bold", "sans-serif"],
@@ -11,17 +14,34 @@ module.exports = {
         EBGaramond600: ["EBGaramond-Medium", "serif"],
         EBGaramond500: ["EBGaramond-Regular", "serif"],
         mono: [
+          '"JetBrains Mono"',
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
           "Monaco",
           "Consolas",
-          "Liberation Mono",
-          "Courier New",
           "monospace",
         ],
       },
       colors: {
+        scroll: {
+          bg: "#F7F5F0",
+          surface: "#FFFFFF",
+          surfaceAlt: "#FAF9F7",
+          line: "#E8E4DF",
+          lineLight: "#F0ECE6",
+          ink: "#0D0D0D",
+          inkLight: "#3E3B36",
+          inkMuted: "#7A756D",
+          inkFaint: "#A8A49D",
+          olive: "#556B2F",
+          oliveSoft: "#EEF3E8",
+          emerald: "#15803D",
+          emeraldSoft: "#DCFCE7",
+          amber: "#D97706",
+          amberSoft: "#FEF3C7",
+          orange: "#EA580C",
+        },
         primary: {
           light: "#00AFEF",
           text: "#333333",
