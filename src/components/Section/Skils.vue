@@ -1,40 +1,40 @@
 <template>
-  <section id="skills" class="py-24 relative overflow-hidden bg-[#030712] border-t border-cyan-500/15">
-    <!-- Cyber Background Accents -->
-    <div class="absolute inset-0 cyber-grid-bg opacity-25 pointer-events-none"></div>
-    <div class="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+  <section id="skills" class="py-24 relative overflow-hidden bg-[#F7F5F0] border-t border-[#E8E4DF]">
+    <!-- Background Texture -->
+    <div class="absolute inset-0 scroll-grid-bg opacity-35 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-0 w-96 h-96 bg-[#556B2F]/[0.03] rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#15803D]/[0.025] rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <!-- Section Header with HUD Elements -->
+      <!-- Section Header with Editorial Story Elements -->
       <div class="flex flex-col items-center text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/40 border border-cyan-500/30 rounded-none cyber-chamfer-sm text-[11px] font-mono text-cyan-300 tracking-widest uppercase mb-4">
-          <span class="w-1.5 h-1.5 bg-cyan-400 animate-ping"></span>
-          <span>// TECHNICAL MATRIX // VERIFIED CAPABILITIES</span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#E8E4DF] rounded-full text-xs font-mono text-[#7A756D] uppercase tracking-wider mb-4 shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#556B2F] animate-pulse"></span>
+          <span>Chapter 02 ── Capabilities & Technical Toolkit</span>
         </div>
 
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-white tracking-tight mb-4 font-Satoshi900">
-          TECHNICAL <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300 glow-cyan">ARSENAL</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[#0D0D0D] tracking-tight mb-4 leading-tight">
+          The Technical <span class="italic text-[#556B2F]">Toolkit</span>
         </h2>
 
-        <p class="text-slate-400 max-w-2xl text-sm md:text-base font-Satoshi400 leading-relaxed mb-8">
+        <p class="text-[#4A4845] max-w-2xl text-sm md:text-base font-sans leading-relaxed mb-8">
           Extensive hands-on proficiency across modern frontend systems, React Native mobile engineering, real-time data protocols (WebSockets/SSE), resilient state architectures, and Web3 technologies.
         </p>
 
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#060c18] border border-cyan-500/20 cyber-chamfer-sm font-mono text-xs max-w-3xl">
+        <!-- Category Filter Tabs (Pill Style) -->
+        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-full font-sans text-xs max-w-3xl shadow-xs backdrop-blur-sm">
           <button
             v-for="category in categories"
             :key="category.id"
             @click="activeCategory = category.id"
             :class="[
-              'px-3.5 py-2 transition-all duration-300 flex items-center gap-1.5 cyber-chamfer-sm',
+              'px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5 font-medium',
               activeCategory === category.id
-                ? 'bg-cyan-500 text-black font-bold shadow-[0_0_12px_rgba(0,240,255,0.4)]'
-                : 'text-slate-400 hover:text-cyan-300 hover:bg-cyan-950/30'
+                ? 'bg-[#0D0D0D] text-white shadow-xs'
+                : 'text-[#4A4845] hover:text-[#0D0D0D] hover:bg-[#FAF9F7]'
             ]"
           >
-            <span class="text-[9px] opacity-70">{{ category.code }}</span>
+            <span class="text-[10px] font-mono opacity-60">{{ category.code }}</span>
             <span>{{ category.label }}</span>
           </button>
         </div>
@@ -45,43 +45,39 @@
         <div
           v-for="(skill, index) in filteredSkills"
           :key="skill.name"
-          class="group relative bg-[#070e1d]/90 border border-cyan-500/20 hover:border-cyan-400 p-4 flex flex-col items-center justify-between text-center transition-all duration-300 cyber-chamfer-sm hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] hover:-translate-y-1"
+          class="group relative bg-white border border-[#E8E4DF] hover:border-[#556B2F]/60 p-4 rounded-2xl flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_2px_8px_-2px_rgba(13,13,13,0.03)] hover:shadow-md hover:-translate-y-1"
         >
-          <!-- Corner Tech Accent on Hover -->
-          <div class="absolute top-1 right-1 w-2 h-2 border-t-2 border-r-2 border-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="absolute bottom-1 left-1 w-2 h-2 border-b-2 border-l-2 border-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
           <!-- Top Index / Module Tag -->
-          <div class="w-full flex items-center justify-between text-[9px] font-mono text-cyan-500/60 mb-3">
+          <div class="w-full flex items-center justify-between text-[10px] font-mono text-[#7A756D] mb-3">
             <span>#{{ String(index + 1).padStart(2, '0') }}</span>
-            <span class="text-[8px] uppercase tracking-wider text-slate-500 group-hover:text-cyan-400 transition-colors">{{ skill.badge }}</span>
+            <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#FAF9F7] text-[#4A4845] border border-[#E8E4DF]/60">{{ skill.badge }}</span>
           </div>
 
           <!-- Tech Icon Container -->
-          <div class="w-14 h-14 mb-3 flex items-center justify-center p-2 rounded bg-[#0b162a] border border-cyan-500/10 group-hover:border-cyan-500/40 group-hover:bg-[#0f1f3a] transition-all duration-300">
-            <div v-html="skill.iconSvg" class="w-full h-full flex items-center justify-center fill-current transition-transform duration-300 group-hover:scale-110"></div>
+          <div class="w-14 h-14 mb-3 flex items-center justify-center p-2.5 rounded-xl bg-[#FAF9F7] border border-[#E8E4DF]/80 group-hover:border-[#556B2F]/30 group-hover:bg-[#EEF3E8]/50 transition-all duration-300">
+            <div v-html="skill.iconSvg" class="w-full h-full flex items-center justify-center fill-current transition-transform duration-300 group-hover:scale-105"></div>
           </div>
 
           <!-- Tech Name -->
-          <div class="font-mono text-xs md:text-sm font-bold text-white group-hover:text-cyan-300 transition-colors mb-1">
+          <div class="font-sans text-xs md:text-sm font-bold text-[#0D0D0D] group-hover:text-[#556B2F] transition-colors mb-1">
             {{ skill.name }}
           </div>
 
           <!-- Subtext / Usage -->
-          <div class="text-[9px] font-mono text-slate-400 mb-2 truncate w-full">
+          <div class="text-[11px] font-mono text-[#7A756D] mb-3 truncate w-full">
             {{ skill.sub }}
           </div>
 
-          <!-- Level / Proficiency Readout -->
-          <div class="w-full pt-2 mt-auto border-t border-cyan-500/10 flex flex-col gap-1">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-400">
-              <span>MASTERY</span>
-              <span class="text-cyan-400 font-bold">{{ skill.level }}%</span>
+          <!-- Level / Proficiency Gauge -->
+          <div class="w-full pt-2 mt-auto border-t border-[#E8E4DF] flex flex-col gap-1">
+            <div class="flex items-center justify-between text-[10px] font-mono text-[#7A756D]">
+              <span>PROFICIENCY</span>
+              <span class="text-[#0D0D0D] font-bold">{{ skill.level }}%</span>
             </div>
             <!-- Progress Bar -->
-            <div class="w-full h-1 bg-slate-800 rounded-full overflow-hidden">
+            <div class="w-full h-1.5 bg-[#F0ECE6] rounded-full overflow-hidden">
               <div
-                class="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 transition-all duration-700"
+                class="h-full bg-gradient-to-r from-[#556B2F] to-[#15803D] transition-all duration-700 rounded-full"
                 :style="{ width: `${skill.level}%` }"
               ></div>
             </div>
@@ -90,36 +86,36 @@
       </div>
 
       <!-- Core Architecture Pillars from Resume -->
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
-        <div class="p-6 bg-[#070e1c] border border-cyan-500/20 cyber-chamfer">
-          <div class="text-cyan-400 text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-            <span>PILLAR 01 // FRONTEND ARCHITECTURE</span>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+          <div class="text-[#556B2F] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#556B2F]"></span>
+            <span>Pillar 01 // Frontend Architecture</span>
           </div>
-          <h4 class="text-white font-bold text-sm mb-2 font-Satoshi700">Design Systems & Monorepos</h4>
-          <p class="text-slate-400 leading-relaxed font-Satoshi400">
+          <h4 class="text-[#0D0D0D] font-bold text-base mb-2">Design Systems & Monorepos</h4>
+          <p class="text-[#4A4845] text-xs sm:text-sm leading-relaxed">
             Building reusable typed UI component libraries, monorepo architectures, infinite bi-directional lists for large datasets, and performance-tuned SPAs/SSRs.
           </p>
         </div>
 
-        <div class="p-6 bg-[#070e1c] border border-cyan-500/20 cyber-chamfer">
-          <div class="text-emerald-400 text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span>PILLAR 02 // REACT NATIVE & MOBILE</span>
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+          <div class="text-[#15803D] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            <span>Pillar 02 // React Native & Mobile</span>
           </div>
-          <h4 class="text-white font-bold text-sm mb-2 font-Satoshi700">Cross-Platform Native Apps</h4>
-          <p class="text-slate-400 leading-relaxed font-Satoshi400">
+          <h4 class="text-[#0D0D0D] font-bold text-base mb-2">Cross-Platform Native Apps</h4>
+          <p class="text-[#4A4845] text-xs sm:text-sm leading-relaxed">
             End-to-end mobile product delivery using React Native, Expo, and NativeWind, covering authentication, offline-first flows, and smooth native bridges.
           </p>
         </div>
 
-        <div class="p-6 bg-[#070e1c] border border-cyan-500/20 cyber-chamfer">
-          <div class="text-amber-400 text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-            <span>PILLAR 03 // REAL-TIME & WEB3</span>
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+          <div class="text-[#B45309] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#B45309]"></span>
+            <span>Pillar 03 // Real-Time & Web3</span>
           </div>
-          <h4 class="text-white font-bold text-sm mb-2 font-Satoshi700">WebSockets, SSE & Wallets</h4>
-          <p class="text-slate-400 leading-relaxed font-Satoshi400">
+          <h4 class="text-[#0D0D0D] font-bold text-base mb-2">WebSockets, SSE & Wallets</h4>
+          <p class="text-[#4A4845] text-xs sm:text-sm leading-relaxed">
             High-throughput live operational analytics with WebSockets/SSE, in-app custodial multi-asset crypto wallets, and privacy-first Aleo smart contracts.
           </p>
         </div>
@@ -134,12 +130,12 @@ import { ref, computed } from "vue";
 const activeCategory = ref("ALL");
 
 const categories = [
-  { id: "ALL", code: "// 00", label: "ALL SKILLS" },
-  { id: "FRONTEND", code: "// 01", label: "FRONTEND" },
-  { id: "MOBILE", code: "// 02", label: "MOBILE" },
-  { id: "STATE", code: "// 03", label: "STATE & DATA" },
-  { id: "REALTIME", code: "// 04", label: "REAL-TIME & WEB3" },
-  { id: "TOOLING", code: "// 05", label: "TOOLING & DEVOPS" },
+  { id: "ALL", code: "00", label: "All Skills" },
+  { id: "FRONTEND", code: "01", label: "Frontend Core" },
+  { id: "MOBILE", code: "02", label: "Mobile Apps" },
+  { id: "STATE", code: "03", label: "State & Data" },
+  { id: "REALTIME", code: "04", label: "Real-Time & Web3" },
+  { id: "TOOLING", code: "05", label: "DevOps & Tooling" },
 ];
 
 const skills = [
@@ -150,7 +146,7 @@ const skills = [
     badge: "LIBRARY",
     sub: "SPA / Hooks / UI",
     level: 98,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"></circle><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8z"/></g></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><g fill="#0088cc"><circle cx="64" cy="64" r="11.4"></circle><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8z"/></g></svg>`,
   },
   {
     name: "Next.js",
@@ -158,7 +154,7 @@ const skills = [
     badge: "SSR / SSG",
     sub: "App Router / SEO",
     level: 95,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="64" fill="#000"/><path fill="#fff" d="M102.3 108.6 44.2 34.2H34v59.6h8.7V46.6l54.4 69.4c1.8-2.2 3.6-4.7 5.2-7.4z"/><path fill="#fff" d="M84.7 34.2h8.7v59.6h-8.7z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="64" fill="#0D0D0D"/><path fill="#fff" d="M102.3 108.6 44.2 34.2H34v59.6h8.7V46.6l54.4 69.4c1.8-2.2 3.6-4.7 5.2-7.4z"/><path fill="#fff" d="M84.7 34.2h8.7v59.6h-8.7z"/></svg>`,
   },
   {
     name: "TypeScript",
@@ -166,7 +162,7 @@ const skills = [
     badge: "LANGUAGE",
     sub: "Type Safety / Generics",
     level: 97,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#007acc" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#3178c6" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"/></svg>`,
   },
   {
     name: "Vue.js",
@@ -216,7 +212,7 @@ const skills = [
     badge: "MOBILE CORE",
     sub: "iOS & Android Apps",
     level: 96,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><g fill="#00D8FF"><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(30 64 64)"/><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(90 64 64)"/><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(150 64 64)"/><circle cx="64" cy="64" r="8" fill="#fff"/></g></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><g fill="#0088cc"><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(30 64 64)"/><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(90 64 64)"/><ellipse cx="64" cy="64" rx="14" ry="48" transform="rotate(150 64 64)"/><circle cx="64" cy="64" r="8" fill="#0D0D0D"/></g></svg>`,
   },
   {
     name: "Expo",
@@ -224,7 +220,7 @@ const skills = [
     badge: "FRAMEWORK",
     sub: "EAS / Prebuild",
     level: 95,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#fff" d="M26.4 104.9c-2.4-3.5-3.7-7.6-3.7-11.9 0-11.4 9.3-20.7 20.7-20.7 4.3 0 8.4 1.3 11.9 3.7l46.3-46.3c-3.5-2.4-7.6-3.7-11.9-3.7-11.4 0-20.7 9.3-20.7 20.7 0 4.3 1.3 8.4 3.7 11.9L26.4 104.9z"/><path fill="#000" d="M128 0H0v128h128V0z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#0D0D0D" d="M26.4 104.9c-2.4-3.5-3.7-7.6-3.7-11.9 0-11.4 9.3-20.7 20.7-20.7 4.3 0 8.4 1.3 11.9 3.7l46.3-46.3c-3.5-2.4-7.6-3.7-11.9-3.7-11.4 0-20.7 9.3-20.7 20.7 0 4.3 1.3 8.4 3.7 11.9L26.4 104.9z"/><circle cx="64" cy="64" r="54" fill="none" stroke="#0D0D0D" stroke-width="4"/></svg>`,
   },
   {
     name: "NativeWind",
@@ -232,7 +228,7 @@ const skills = [
     badge: "MOBILE STYLES",
     sub: "Tailwind on Mobile",
     level: 94,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#00f0ff" d="M64 25.6c-25.6 0-38.4 12.8-38.4 38.4 6.4-12.8 16-19.2 28.8-19.2 10.7 0 18.5 7.9 26.5 16C93.8 73.8 105.1 85.3 128 85.3c25.6 0 38.4-12.8 38.4-38.4-6.4 12.8-16 19.2-28.8 19.2-10.7 0-18.5-7.9-26.5-16C98.2 37.1 86.9 25.6 64 25.6z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#0284c7" d="M64 25.6c-25.6 0-38.4 12.8-38.4 38.4 6.4-12.8 16-19.2 28.8-19.2 10.7 0 18.5 7.9 26.5 16C93.8 73.8 105.1 85.3 128 85.3c25.6 0 38.4-12.8 38.4-38.4-6.4 12.8-16 19.2-28.8 19.2-10.7 0-18.5-7.9-26.5-16C98.2 37.1 86.9 25.6 64 25.6z"/></svg>`,
   },
   {
     name: "Bootstrap",
@@ -250,7 +246,7 @@ const skills = [
     badge: "STATE ENGINE",
     sub: "Lean / Reactive Store",
     level: 96,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#443E38"/><path d="M40 44h48L40 84h48" stroke="#E58A3C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#EAE6DF"/><path d="M40 44h48L40 84h48" stroke="#D97706" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`,
   },
   {
     name: "Redux & Toolkit",
@@ -266,7 +262,7 @@ const skills = [
     badge: "STATE ENGINE",
     sub: "Modular Store Architecture",
     level: 98,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#FFE56E" d="M64 10c-25 0-40 20-40 45 0 35 40 63 40 63s40-28 40-63c0-25-15-45-40-45z"/><circle cx="50" cy="50" r="6" fill="#35495E"/><circle cx="78" cy="50" r="6" fill="#35495E"/><path d="M46 72c6 6 30 6 36 0" stroke="#35495E" stroke-width="4" stroke-linecap="round" fill="none"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#FBBF24" d="M64 10c-25 0-40 20-40 45 0 35 40 63 40 63s40-28 40-63c0-25-15-45-40-45z"/><circle cx="50" cy="50" r="6" fill="#35495E"/><circle cx="78" cy="50" r="6" fill="#35495E"/><path d="M46 72c6 6 30 6 36 0" stroke="#35495E" stroke-width="4" stroke-linecap="round" fill="none"/></svg>`,
   },
   {
     name: "Context API",
@@ -274,7 +270,7 @@ const skills = [
     badge: "REACT NATIVE",
     sub: "Prop Drilling Mitigation",
     level: 95,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#00D8FF" opacity="0.2"/><path d="M44 64h40M64 44v40" stroke="#00D8FF" stroke-width="8" stroke-linecap="round"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#0284c7" opacity="0.15"/><path d="M44 64h40M64 44v40" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/></svg>`,
   },
   {
     name: "REST APIs",
@@ -282,7 +278,7 @@ const skills = [
     badge: "NETWORKING",
     sub: "Axios / Interceptors",
     level: 99,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#5A29E4" d="M64 10l50 28v54l-50 28-50-28V38z"/><path fill="#fff" d="M38 64h52M72 46l18 18-18 18" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#556B2F" d="M64 10l50 28v54l-50 28-50-28V38z"/><path fill="#fff" d="M38 64h52M72 46l18 18-18 18" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`,
   },
 
   // REAL-TIME & WEB3
@@ -292,7 +288,7 @@ const skills = [
     badge: "STREAMING",
     sub: "Bi-directional Live Data",
     level: 95,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#00f0ff" d="M64 12c-28.7 0-52 23.3-52 52s23.3 52 52 52 52-23.3 52-52-23.3-52-52-52zm0 18c18.8 0 34 15.2 34 34s-15.2 34-34 34-34-15.2-34-34 15.2-34 34-34zm-8 18v32l24-16-24-16z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#556B2F" d="M64 12c-28.7 0-52 23.3-52 52s23.3 52 52 52 52-23.3 52-52-23.3-52-52-52zm0 18c18.8 0 34 15.2 34 34s-15.2 34-34 34-34-15.2-34-34 15.2-34 34-34zm-8 18v32l24-16-24-16z"/></svg>`,
   },
   {
     name: "SSE (Server-Sent)",
@@ -300,7 +296,7 @@ const skills = [
     badge: "EVENT STREAM",
     sub: "Real-time Live Feeds",
     level: 93,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#00ff9d" d="M20 64c0-24.3 19.7-44 44-44s44 19.7 44 44-19.7 44-44 44M36 64c0-15.5 12.5-28 28-28s28 12.5 28 28-12.5 28-28 28" stroke="#00ff9d" stroke-width="6" fill="none"/><circle cx="64" cy="64" r="8" fill="#00ff9d"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path d="M20 64c0-24.3 19.7-44 44-44s44 19.7 44 44-19.7 44-44 44M36 64c0-15.5 12.5-28 28-28s28 12.5 28 28-12.5 28-28 28" stroke="#15803D" stroke-width="6" fill="none"/><circle cx="64" cy="64" r="8" fill="#15803D"/></svg>`,
   },
   {
     name: "Crypto Wallets",
@@ -308,7 +304,7 @@ const skills = [
     badge: "WEB3",
     sub: "Custodial & EOA Wallets",
     level: 92,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#F5A623" d="M108 34H20c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h88c4.4 0 8-3.6 8-8V42c0-4.4-3.6-8-8-8zm-8 38c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><path fill="#D97706" d="M108 34H20c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h88c4.4 0 8-3.6 8-8V42c0-4.4-3.6-8-8-8zm-8 38c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg>`,
   },
   {
     name: "Aleo SDK",
@@ -316,7 +312,7 @@ const skills = [
     badge: "ZERO KNOWLEDGE",
     sub: "ZK Proofs & Leo Smart Contracts",
     level: 90,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#121212"/><path d="M44 84V44h40M44 64h30" stroke="#00f0ff" stroke-width="8" stroke-linecap="round"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#0D0D0D"/><path d="M44 84V44h40M44 64h30" stroke="#fff" stroke-width="8" stroke-linecap="round"/></svg>`,
   },
 
   // TOOLING & ARCHITECTURE
@@ -326,7 +322,7 @@ const skills = [
     badge: "ARCHITECTURE",
     sub: "Turborepo / Shared Packages",
     level: 92,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><rect x="20" y="20" width="36" height="36" rx="4" fill="#00f0ff"/><rect x="72" y="20" width="36" height="36" rx="4" fill="#00f0ff" opacity="0.7"/><rect x="20" y="72" width="36" height="36" rx="4" fill="#00f0ff" opacity="0.7"/><rect x="72" y="72" width="36" height="36" rx="4" fill="#00ff9d"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><rect x="20" y="20" width="36" height="36" rx="6" fill="#556B2F"/><rect x="72" y="20" width="36" height="36" rx="6" fill="#556B2F" opacity="0.7"/><rect x="20" y="72" width="36" height="36" rx="6" fill="#556B2F" opacity="0.7"/><rect x="72" y="72" width="36" height="36" rx="6" fill="#15803D"/></svg>`,
   },
   {
     name: "Git & GitHub",
@@ -358,7 +354,7 @@ const skills = [
     badge: "DEPLOYMENT",
     sub: "Edge Deployments / CI",
     level: 95,
-    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><polygon points="64 16 118 108 10 108" fill="#fff"/></svg>`,
+    iconSvg: `<svg viewBox="0 0 128 128" class="w-8 h-8"><circle cx="64" cy="64" r="54" fill="#0D0D0D"/><polygon points="64 26 102 96 26 96" fill="#fff"/></svg>`,
   },
   {
     name: "Microsoft Azure",
