@@ -42,7 +42,7 @@ const scrollToSection = (id) => {
       <div class="flex items-center gap-4">
         <span>{{ yearsOfExp }}+ YEARS EXPERIENCE</span>
         <span class="text-[#D6D0C7]">/</span>
-        <span class="text-[#0D0D0D] font-medium">16+ SHIPPED PRODUCTS</span>
+        <span class="text-[#0D0D0D] font-medium">17+ SHIPPED PRODUCTS</span>
       </div>
     </div>
 

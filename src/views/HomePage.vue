@@ -48,9 +48,9 @@ import StoryTransition from "@/components/StoryTransition.vue";
       targetId="projects"
       actionText="View Selected Products"
       accentColor="emerald"
-      narrative="Theoretical depth only matters when proven in the hands of real users. From multi-currency statutory payroll engines in London to mobile fintech in Zambia, explore 16 shipped products delivered across 14+ global partners."
+      narrative="Theoretical depth only matters when proven in the hands of real users. From multi-currency statutory payroll engines in London to mobile fintech in Zambia and native desktop systems, explore 17 shipped products delivered across 14+ global partners."
       :terminalLogs="[
-        '16 Verified Production Apps across 7 Nations',
+        '17 Verified Production Apps across 7 Nations',
         'Partner Network: UK, Canada, US, Zambia, South Africa, Netherlands, Nigeria',
         'High-Throughput Fintech, Global EOR/Payroll & Real-Time Analytics',
       ]"
