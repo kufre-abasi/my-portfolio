@@ -16,6 +16,7 @@ import KavlrLogo from "@/assets/img/kavlr_Logo.svg";
 import workremitsLogo from "@/assets/workremits-logo.svg";
 import fajiriLogo from "@/assets/fajiri-logo.png";
 import geogridLogo from "@/assets/geogrid-logo.svg";
+import blinkReminderLogo from "@/assets/blink-reminder-logo.png";
 
 const showModal = ref(false);
 const activeFilter = ref("ALL");
@@ -129,6 +130,23 @@ const projects = ref([
   },
   {
     id: "07",
+    name: "Blink Reminder",
+    role: "Creator & Systems Architect (Desktop App)",
+    timeline: "2026 // OPEN BUNDLE",
+    location: "macOS Desktop App // DMG",
+    category: "SIDE_QUEST",
+    tag: "DESKTOP APP // TAURI V2 // RUST // EYE ERGONOMICS",
+    status: "DOWNLOAD READY",
+    logo: blinkReminderLogo,
+    content: "Engineered a native, ultra-lean macOS desktop eye-care companion to prevent developer eye fatigue (20-20-20 rule). Built with Tauri v2 and Rust for an ultra-lightweight footprint (<15MB RAM). Implements frameless window kinematics, system tray daemon integration, auto-launch at login via launchd, workspace/space focus-forcing, ambient rest chimes, and native OS notifications.",
+    tech: ["Tauri v2", "Rust", "Vanilla JS", "Vite", "macOS AppKit", "Launchd", "Web Audio API"],
+    url: "/blink-reminder",
+    isInternalRoute: true,
+    downloadUrl: "/downloads/Blink-Reminder-1.0.0-x64.dmg",
+    downloadName: "Blink Reminder_1.0.0_x64.dmg",
+  },
+  {
+    id: "08",
     name: "Peakgram",
     role: "Frontend Engineer (Contract)",
     timeline: "2024 - PRESENT",
@@ -142,7 +160,7 @@ const projects = ref([
     url: "https://peakgram.com/",
   },
   {
-    id: "08",
+    id: "09",
     name: "Fajiri Foundation",
     role: "Lead Frontend Engineer (Contract)",
     timeline: "2024 - PRESENT",
@@ -156,7 +174,7 @@ const projects = ref([
     url: "https://fajiri.org/",
   },
   {
-    id: "09",
+    id: "10",
     name: "Demz Aminytics / Proxy Med",
     role: "Senior Frontend Engineer",
     timeline: "JUN 2025 - AUG 2025",
@@ -170,7 +188,7 @@ const projects = ref([
     url: "https://prxy.health/weight-loss",
   },
   {
-    id: "10",
+    id: "11",
     name: "Tec-Ride B.V.",
     role: "Frontend Engineer (Contract)",
     timeline: "MAR 2024 - DEC 2024",
@@ -184,7 +202,7 @@ const projects = ref([
     url: "https://tec-ride.com/",
   },
   {
-    id: "11",
+    id: "12",
     name: "CroxxTalent",
     role: "Frontend Engineer",
     timeline: "JUN 2023 - DEC 2025",
@@ -198,7 +216,7 @@ const projects = ref([
     url: "https://croxxtalent.com/",
   },
   {
-    id: "12",
+    id: "13",
     name: "Leofolio (Aleo Blockchain)",
     role: "Core Developer & Blockchain Architect",
     timeline: "ALEO CODESPRINT V3 (3RD PLACE)",
@@ -212,7 +230,7 @@ const projects = ref([
     url: "https://github.com/kufre-abasi",
   },
   {
-    id: "13",
+    id: "14",
     name: "Zoogla",
     role: "Support Frontend Developer",
     timeline: "OCT 2024 - DEC 2024",
@@ -226,7 +244,7 @@ const projects = ref([
     url: "https://zoogla.co.za/",
   },
   {
-    id: "14",
+    id: "15",
     name: "MySpurr",
     role: "Frontend Web Developer",
     timeline: "JUL 2023 - JUN 2024",
@@ -240,7 +258,7 @@ const projects = ref([
     url: "https://www.myspurr.net/",
   },
   {
-    id: "15",
+    id: "16",
     name: "Gokamba (Kavlr)",
     role: "Frontend Web Developer",
     timeline: "FEB 2023 - JUN 2023",
@@ -254,7 +272,7 @@ const projects = ref([
     url: "https://gokamba.com/",
   },
   {
-    id: "16",
+    id: "17",
     name: "Tribinnov Africa",
     role: "Frontend Web Developer",
     timeline: "APR 2022 - JAN 2024",
@@ -438,12 +456,24 @@ const filteredProjects = computed(() => {
           </div>
 
           <!-- Card Action Footer -->
-          <div class="p-6 pt-0">
+          <div class="p-6 pt-0 flex flex-col sm:flex-row items-center gap-2">
+            <router-link
+              v-if="item.isInternalRoute"
+              :to="item.url"
+              class="scroll-btn-secondary flex-1 w-full flex items-center justify-between text-xs py-2.5 group-hover:border-[#556B2F] group-hover:text-[#556B2F] transition-colors"
+            >
+              <span>View & Share App</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </router-link>
             <a
+              v-else
               :href="item.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="scroll-btn-secondary w-full flex items-center justify-between text-xs py-2.5 group-hover:border-[#556B2F] group-hover:text-[#556B2F] transition-colors"
+              class="scroll-btn-secondary flex-1 w-full flex items-center justify-between text-xs py-2.5 group-hover:border-[#556B2F] group-hover:text-[#556B2F] transition-colors"
             >
               <span>Explore Project</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -451,6 +481,21 @@ const filteredProjects = computed(() => {
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
+            </a>
+
+            <a
+              v-if="item.downloadUrl"
+              :href="item.downloadUrl"
+              :download="item.downloadName || 'Blink Reminder_1.0.0_x64.dmg'"
+              class="w-full sm:w-auto px-3.5 py-2.5 bg-[#15803D] hover:bg-[#166534] text-white text-xs font-mono font-medium rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              title="Download macOS .dmg"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>DMG (6MB)</span>
             </a>
           </div>
         </div>
