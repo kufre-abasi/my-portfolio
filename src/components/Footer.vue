@@ -17,7 +17,7 @@ const scrollToTop = () => {
         <!-- Identity & Manifesto -->
         <div class="md:col-span-7 flex flex-col items-start">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-8 rounded-full bg-[#0D0D0D] text-white flex items-center justify-center font-display text-sm font-semibold shadow-xs">
+            <div class="w-8 h-8 rounded-none bg-[#0D0D0D] text-white flex items-center justify-center font-display text-sm font-semibold shadow-xs">
               KB
             </div>
             <div class="font-sans text-sm font-bold text-[#0D0D0D] tracking-tight">
@@ -30,9 +30,9 @@ const scrollToTop = () => {
           </p>
 
           <!-- Status & Contact Badge -->
-          <div class="inline-flex flex-wrap items-center gap-3 px-3.5 py-2 bg-white border border-[#E8E4DF] rounded-2xl font-mono text-[11px] text-[#4A4845] shadow-xs">
+          <div class="inline-flex flex-wrap items-center gap-3 px-3.5 py-2 bg-white border border-[#E8E4DF] rounded-none font-mono text-[11px] text-[#4A4845] shadow-xs">
             <span class="flex items-center gap-1.5 text-[#15803D] font-medium">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-ping"></span>
+              <span class="w-1.5 h-1.5 bg-[#15803D] animate-ping"></span>
               <span>Available for Hire</span>
             </span>
             <span class="text-[#E8E4DF]">|</span>
@@ -47,10 +47,13 @@ const scrollToTop = () => {
           <div class="flex flex-wrap gap-5 font-sans text-xs text-[#4A4845] mb-6 font-medium">
             <a href="#profile" class="hover:text-[#556B2F] transition-colors">01. About</a>
             <a href="#skills" class="hover:text-[#556B2F] transition-colors">02. Toolkit</a>
-            <a href="#projects" class="hover:text-[#556B2F] transition-colors">03. Selected Work</a>
+            <a href="#projects" class="hover:text-[#556B2F] transition-colors">03. Work</a>
+            <a href="#events" class="hover:text-[#556B2F] transition-colors">04. Events</a>
+            <RouterLink to="/events" class="hover:text-[#556B2F] text-[#556B2F] font-semibold transition-colors">Gallery ↗</RouterLink>
             <a
               href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m"
               target="_blank"
+              rel="noopener noreferrer"
               class="text-[#556B2F] hover:underline transition-colors flex items-center gap-1"
             >
               <span>Resume</span>
@@ -79,6 +82,7 @@ const scrollToTop = () => {
           <a
             href="https://github.com/kufre-abasi"
             target="_blank"
+            rel="noopener noreferrer"
             class="hover:text-[#556B2F] transition-colors"
           >
             GitHub
@@ -87,6 +91,7 @@ const scrollToTop = () => {
           <a
             href="https://www.linkedin.com/in/kufre-abasi-bassey-692b38212/"
             target="_blank"
+            rel="noopener noreferrer"
             class="hover:text-[#556B2F] transition-colors"
           >
             LinkedIn
@@ -95,6 +100,7 @@ const scrollToTop = () => {
           <a
             href="https://twitter.com/kufreabasiBass1"
             target="_blank"
+            rel="noopener noreferrer"
             class="hover:text-[#556B2F] transition-colors"
           >
             X (Twitter)

@@ -1,0 +1,7 @@
+# User-agent rules for Kufre-Abasi Bassey Portfolio
+User-agent: *
+Allow: /
+
+# Canonical Sitemaps
+Sitemap: https://www.kufreabasibassey.com/sitemap.xml
+Sitemap: https://kufre-abasi.netlify.app/sitemap.xml

@@ -312,8 +312,8 @@ const filteredProjects = computed(() => {
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div class="flex flex-col items-center text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#E8E4DF] rounded-full text-xs font-mono text-[#7A756D] uppercase tracking-wider mb-4 shadow-xs">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-ping"></span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#E8E4DF] rounded-none text-xs font-mono text-[#7A756D] uppercase tracking-wider mb-4 shadow-xs">
+          <span class="w-1.5 h-1.5 bg-[#15803D] animate-ping"></span>
           <span>Chapter 03 ── Selected Work & Verified Products</span>
         </div>
 
@@ -325,8 +325,8 @@ const filteredProjects = computed(() => {
           Extensive engineering track record spanning United States, UK, Canada, Netherlands, Zambia, South Africa, and Nigeria. Building high-availability fintech, global payroll engines, real-time analytics, mobile apps, and Web3 architectures.
         </p>
 
-        <!-- Brands & Organizations Telemetry Matrix -->
-        <div class="w-full max-w-5xl mb-12 p-6 bg-white border border-[#E8E4DF] rounded-3xl shadow-sm">
+        <!-- Brands & Organizations Telemetry Matrix (Sharp Card) -->
+        <div class="w-full max-w-5xl mb-12 p-6 bg-white border border-[#E8E4DF] rounded-none shadow-sm">
           <div class="text-xs font-mono text-[#7A756D] uppercase tracking-wider text-left mb-4 flex items-center justify-between pb-3 border-b border-[#E8E4DF]">
             <span class="font-semibold text-[#0D0D0D]">Partner & Client Network</span>
             <span class="text-[#15803D] font-bold">{{ brands.length }}+ Global Collaborations</span>
@@ -336,14 +336,15 @@ const filteredProjects = computed(() => {
             <div
               v-for="brand in brands"
               :key="brand.name"
-              class="p-3 bg-[#FAF9F7] border border-[#E8E4DF] hover:border-[#556B2F]/40 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xs hover:-translate-y-0.5 group"
+              class="p-3 bg-[#FAF9F7] border border-[#E8E4DF] hover:border-[#556B2F]/40 rounded-none flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xs hover:-translate-y-0.5 group"
             >
               <div class="h-8 w-full flex items-center justify-center mb-1.5">
                 <img
                   v-if="brand.logo"
                   :src="brand.logo"
-                  :alt="brand.name"
+                  :alt="brand.name + ' - Client & Partner'"
                   class="max-h-7 max-w-[80%] object-contain transition-all duration-300 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <span v-else class="text-[#0D0D0D] font-mono text-xs font-bold tracking-tight">
                   &lt;{{ brand.name.slice(0, 4) }}/&gt;
@@ -359,22 +360,22 @@ const filteredProjects = computed(() => {
           </div>
         </div>
 
-        <!-- Project Filter Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-full font-sans text-xs shadow-xs backdrop-blur-sm">
+        <!-- Project Filter Tabs (Sharp Edges) -->
+        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-none font-sans text-xs shadow-xs backdrop-blur-sm">
           <button
             v-for="tab in filterTabs"
             :key="tab.id"
             @click="activeFilter = tab.id"
             :class="[
-              'px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium',
+              'px-4 py-2 rounded-none transition-all duration-200 flex items-center gap-2 font-medium border',
               activeFilter === tab.id
-                ? 'bg-[#0D0D0D] text-white shadow-xs'
-                : 'text-[#4A4845] hover:text-[#0D0D0D] hover:bg-[#FAF9F7]'
+                ? 'bg-[#0D0D0D] text-white border-[#0D0D0D] shadow-xs'
+                : 'text-[#4A4845] border-transparent hover:text-[#0D0D0D] hover:bg-[#FAF9F7]'
             ]"
           >
             <span>{{ tab.label }}</span>
             <span :class="[
-              'text-[10px] font-mono px-1.5 py-0.2 rounded-full',
+              'text-[10px] font-mono px-1.5 py-0.2 rounded-none',
               activeFilter === tab.id ? 'bg-white/20 text-white' : 'bg-[#FAF9F7] text-[#7A756D]'
             ]">
               {{ tab.count }}
@@ -388,14 +389,14 @@ const filteredProjects = computed(() => {
         <div
           v-for="item in filteredProjects"
           :key="item.id"
-          class="group relative bg-white border border-[#E8E4DF] hover:border-[#556B2F]/60 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden"
+          class="group relative bg-white border border-[#E8E4DF] hover:border-[#556B2F]/60 rounded-none flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden"
         >
           <div>
             <!-- Card Header -->
             <div class="px-5 py-3.5 border-b border-[#E8E4DF] flex items-center justify-between font-mono text-xs text-[#7A756D] bg-[#FAF9F7]/70">
               <span class="font-bold tracking-wider text-[#0D0D0D]">PROJECT // {{ item.id }}</span>
               <div class="flex items-center gap-1.5 text-[#15803D] text-[11px] font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-ping"></span>
+                <span class="w-1.5 h-1.5 bg-[#15803D] animate-ping"></span>
                 <span>{{ item.status }}</span>
               </div>
             </div>
@@ -407,8 +408,9 @@ const filteredProjects = computed(() => {
               <img
                 v-if="item.logo"
                 :src="item.logo"
-                :alt="item.name"
+                :alt="item.name + ' - ' + item.tagline"
                 class="max-h-16 max-w-[70%] object-contain relative z-10 transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
               />
               <div v-else class="text-[#0D0D0D] font-display font-bold text-2xl relative z-10 flex flex-col items-center">
                 <span>{{ item.name }}</span>
@@ -447,7 +449,7 @@ const filteredProjects = computed(() => {
                 <span
                   v-for="tag in item.tech"
                   :key="tag"
-                  class="px-2.5 py-0.5 bg-[#FAF9F7] border border-[#E8E4DF] text-[#4A4845] font-mono text-[10px] rounded-full"
+                  class="px-2.5 py-0.5 bg-[#FAF9F7] border border-[#E8E4DF] text-[#4A4845] font-mono text-[10px] rounded-none"
                 >
                   {{ tag }}
                 </span>
@@ -487,7 +489,7 @@ const filteredProjects = computed(() => {
               v-if="item.downloadUrl"
               :href="item.downloadUrl"
               :download="item.downloadName || 'Blink Reminder_1.0.0_x64.dmg'"
-              class="w-full sm:w-auto px-3.5 py-2.5 bg-[#15803D] hover:bg-[#166534] text-white text-xs font-mono font-medium rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              class="w-full sm:w-auto px-3.5 py-2.5 bg-[#15803D] hover:bg-[#166534] text-white text-xs font-mono font-medium rounded-none flex items-center justify-center gap-1.5 transition-colors shadow-xs"
               title="Download macOS .dmg"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -501,12 +503,12 @@ const filteredProjects = computed(() => {
         </div>
       </div>
 
-      <!-- Tactical Hiring / Transmission CTA Callout -->
-      <div class="mt-20 p-8 md:p-12 bg-white border border-[#E8E4DF] rounded-3xl relative overflow-hidden shadow-sm">
+      <!-- Tactical Hiring / Transmission CTA Callout (Sharp Card) -->
+      <div class="mt-20 p-8 md:p-12 bg-white border border-[#E8E4DF] rounded-none relative overflow-hidden shadow-sm">
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div>
             <div class="inline-flex items-center gap-2 text-[#556B2F] font-mono text-xs uppercase tracking-wider mb-2 font-semibold">
-              <span class="w-2 h-2 rounded-full bg-[#556B2F] animate-pulse"></span>
+              <span class="w-2 h-2 bg-[#556B2F] animate-pulse"></span>
               <span>Available for Senior Frontend & React Native Roles</span>
             </div>
             <h3 class="text-2xl sm:text-3xl md:text-4xl font-display text-[#0D0D0D] tracking-tight">
