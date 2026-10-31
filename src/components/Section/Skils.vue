@@ -8,8 +8,8 @@
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <!-- Section Header with Editorial Story Elements -->
       <div class="flex flex-col items-center text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#E8E4DF] rounded-full text-xs font-mono text-[#7A756D] uppercase tracking-wider mb-4 shadow-xs">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#556B2F] animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#E8E4DF] rounded-none text-xs font-mono text-[#7A756D] uppercase tracking-wider mb-4 shadow-xs">
+          <span class="w-1.5 h-1.5 bg-[#556B2F] animate-pulse"></span>
           <span>Chapter 02 ── Capabilities & Technical Toolkit</span>
         </div>
 
@@ -21,17 +21,17 @@
           Extensive hands-on proficiency across modern frontend systems, React Native mobile engineering, real-time data protocols (WebSockets/SSE), resilient state architectures, and Web3 technologies.
         </p>
 
-        <!-- Category Filter Tabs (Pill Style) -->
-        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-full font-sans text-xs max-w-3xl shadow-xs backdrop-blur-sm">
+        <!-- Category Filter Tabs (Sharp Edges) -->
+        <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-none font-sans text-xs max-w-3xl shadow-xs backdrop-blur-sm">
           <button
             v-for="category in categories"
             :key="category.id"
             @click="activeCategory = category.id"
             :class="[
-              'px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-1.5 font-medium',
+              'px-4 py-2 rounded-none transition-all duration-200 flex items-center gap-1.5 font-medium border',
               activeCategory === category.id
-                ? 'bg-[#0D0D0D] text-white shadow-xs'
-                : 'text-[#4A4845] hover:text-[#0D0D0D] hover:bg-[#FAF9F7]'
+                ? 'bg-[#0D0D0D] text-white border-[#0D0D0D] shadow-xs'
+                : 'text-[#4A4845] border-transparent hover:text-[#0D0D0D] hover:bg-[#FAF9F7]'
             ]"
           >
             <span class="text-[10px] font-mono opacity-60">{{ category.code }}</span>
@@ -40,21 +40,21 @@
         </div>
       </div>
 
-      <!-- Skills Matrix Grid -->
+      <!-- Skills Matrix Grid (Sharp Cards) -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <div
           v-for="(skill, index) in filteredSkills"
           :key="skill.name"
-          class="group relative bg-white border border-[#E8E4DF] hover:border-[#556B2F]/60 p-4 rounded-2xl flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_2px_8px_-2px_rgba(13,13,13,0.03)] hover:shadow-md hover:-translate-y-1"
+          class="group relative bg-white border border-[#E8E4DF] hover:border-[#556B2F]/60 p-4 rounded-none flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_2px_8px_-2px_rgba(13,13,13,0.03)] hover:shadow-md hover:-translate-y-1"
         >
           <!-- Top Index / Module Tag -->
           <div class="w-full flex items-center justify-between text-[10px] font-mono text-[#7A756D] mb-3">
             <span>#{{ String(index + 1).padStart(2, '0') }}</span>
-            <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#FAF9F7] text-[#4A4845] border border-[#E8E4DF]/60">{{ skill.badge }}</span>
+            <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded-none bg-[#FAF9F7] text-[#4A4845] border border-[#E8E4DF]/60">{{ skill.badge }}</span>
           </div>
 
           <!-- Tech Icon Container -->
-          <div class="w-14 h-14 mb-3 flex items-center justify-center p-2.5 rounded-xl bg-[#FAF9F7] border border-[#E8E4DF]/80 group-hover:border-[#556B2F]/30 group-hover:bg-[#EEF3E8]/50 transition-all duration-300">
+          <div class="w-14 h-14 mb-3 flex items-center justify-center p-2.5 rounded-none bg-[#FAF9F7] border border-[#E8E4DF]/80 group-hover:border-[#556B2F]/30 group-hover:bg-[#EEF3E8]/50 transition-all duration-300">
             <div v-html="skill.iconSvg" class="w-full h-full flex items-center justify-center fill-current transition-transform duration-300 group-hover:scale-105"></div>
           </div>
 
@@ -75,9 +75,9 @@
               <span class="text-[#0D0D0D] font-bold">{{ skill.level }}%</span>
             </div>
             <!-- Progress Bar -->
-            <div class="w-full h-1.5 bg-[#F0ECE6] rounded-full overflow-hidden">
+            <div class="w-full h-1.5 bg-[#F0ECE6] rounded-none overflow-hidden">
               <div
-                class="h-full bg-gradient-to-r from-[#556B2F] to-[#15803D] transition-all duration-700 rounded-full"
+                class="h-full bg-gradient-to-r from-[#556B2F] to-[#15803D] transition-all duration-700 rounded-none"
                 :style="{ width: `${skill.level}%` }"
               ></div>
             </div>
@@ -85,11 +85,11 @@
         </div>
       </div>
 
-      <!-- Core Architecture Pillars from Resume -->
+      <!-- Core Architecture Pillars from Resume (Sharp Cards) -->
       <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
-        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-none shadow-xs">
           <div class="text-[#556B2F] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#556B2F]"></span>
+            <span class="w-1.5 h-1.5 bg-[#556B2F]"></span>
             <span>Pillar 01 // Frontend Architecture</span>
           </div>
           <h4 class="text-[#0D0D0D] font-bold text-base mb-2">Design Systems & Monorepos</h4>
@@ -98,9 +98,9 @@
           </p>
         </div>
 
-        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-none shadow-xs">
           <div class="text-[#15803D] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            <span class="w-1.5 h-1.5 bg-[#15803D]"></span>
             <span>Pillar 02 // React Native & Mobile</span>
           </div>
           <h4 class="text-[#0D0D0D] font-bold text-base mb-2">Cross-Platform Native Apps</h4>
@@ -109,9 +109,9 @@
           </p>
         </div>
 
-        <div class="p-6 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs">
+        <div class="p-6 bg-white border border-[#E8E4DF] rounded-none shadow-xs">
           <div class="text-[#B45309] text-[11px] font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#B45309]"></span>
+            <span class="w-1.5 h-1.5 bg-[#B45309]"></span>
             <span>Pillar 03 // Real-Time & Web3</span>
           </div>
           <h4 class="text-[#0D0D0D] font-bold text-base mb-2">WebSockets, SSE & Wallets</h4>

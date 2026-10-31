@@ -71,19 +71,19 @@ const dotColor = computed(() => {
       
       <!-- Central Nexus Node -->
       <div class="relative flex items-center justify-center">
-        <div class="w-7 h-7 rounded-full border border-[#E8E4DF] bg-white shadow-xs flex items-center justify-center">
-          <div :class="['w-2.5 h-2.5 rounded-full animate-pulse', dotColor]"></div>
+        <div class="w-6 h-6 border border-[#E8E4DF] bg-white shadow-xs flex items-center justify-center">
+          <div :class="['w-2 h-2 animate-pulse', dotColor]"></div>
         </div>
       </div>
     </div>
 
     <!-- Story Milestone Card -->
     <div class="container mx-auto px-4 max-w-3xl relative z-10">
-      <div class="p-6 md:p-8 bg-white border border-[#E8E4DF] rounded-3xl shadow-[0_4px_25px_-4px_rgba(13,13,13,0.04)] relative group transition-all duration-300 hover:border-[#D8D2C8] hover:shadow-md">
+      <div class="p-6 md:p-8 bg-white border border-[#E8E4DF] rounded-none shadow-[0_4px_25px_-4px_rgba(13,13,13,0.04)] relative group transition-all duration-300 hover:border-[#D8D2C8] hover:shadow-md">
         <!-- Header: Phase Trajectory Track -->
         <div class="flex flex-wrap items-center justify-between gap-3 pb-3 mb-4 border-b border-[#E8E4DF] font-mono text-xs">
           <div class="flex items-center gap-2 text-[#4A4845]">
-            <span :class="['px-2 py-0.5 rounded-full border text-[11px] font-semibold', badgeClass]">
+            <span :class="['px-2 py-0.5 rounded-none border text-[11px] font-semibold', badgeClass]">
               {{ phase }}
             </span>
             <span class="text-[#A8A49D]">/</span>
@@ -93,7 +93,7 @@ const dotColor = computed(() => {
           </div>
 
           <div class="flex items-center gap-1.5 text-[11px] text-[#15803D] font-mono">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-ping"></span>
+            <span class="w-1.5 h-1.5 bg-[#15803D] animate-ping"></span>
             <span>MILESTONE ACTIVE</span>
           </div>
         </div>
@@ -104,7 +104,7 @@ const dotColor = computed(() => {
         </h3>
 
         <!-- Key Engineering Insights / Logs -->
-        <div v-if="terminalLogs && terminalLogs.length" class="mb-5 p-3.5 bg-[#FAF9F7] border border-[#E8E4DF] rounded-xl font-mono text-xs text-[#4A4845] space-y-1.5">
+        <div v-if="terminalLogs && terminalLogs.length" class="mb-5 p-3.5 bg-[#FAF9F7] border border-[#E8E4DF] rounded-none font-mono text-xs text-[#4A4845] space-y-1.5">
           <div v-for="(log, idx) in terminalLogs" :key="idx" class="flex items-start gap-2">
             <span class="text-[#556B2F] select-none font-bold">›</span>
             <span>{{ log }}</span>

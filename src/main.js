@@ -37,4 +37,3 @@ app.use(Toast, { position: POSITION.BOTTOM_LEFT });
 
 app.mount("#app");
 
-document.title = 'Kufre-abasi Bassey';

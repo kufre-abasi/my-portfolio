@@ -3,6 +3,7 @@ import Header from "@/components/Header.vue";
 import SectionOne from "@/components/Section/SectionOne.vue";
 import Skils from "@/components/Section/Skils.vue";
 import SectionSix from "@/components/Section/SectionSix.vue";
+import EventsSection from "@/components/Section/EventsSection.vue";
 import Footer from "@/components/Footer.vue";
 import StoryHUD from "@/components/StoryHUD.vue";
 import StoryTransition from "@/components/StoryTransition.vue";
@@ -59,16 +60,36 @@ import StoryTransition from "@/components/StoryTransition.vue";
     <!-- Chapter 03: Selected Work & Partner Network (Projects) -->
     <SectionSix />
 
-    <!-- Story Transition 03: Work -> Contact -->
+    <!-- Story Transition 03: Work -> Speaking & Events -->
     <StoryTransition
       fromAct="Chapter 03: Work"
-      toAct="Chapter 04: Contact"
+      toAct="Chapter 04: Speaking"
       phase="Milestone 03"
+      title="Public Dialogue, Keynote Stages & Developer Mentorship"
+      targetId="events"
+      actionText="Explore Speaking & Events"
+      accentColor="olive"
+      narrative="Great engineering leadership isn't confined to a compiler. Beyond shipping verified codebases, I actively contribute to developer ecosystems through keynote addresses, intensive Bitcoin & Web3 protocol workshops, ICP.Hub hackathon judging, and STEM diversity mentorship."
+      :terminalLogs="[
+        '8+ International Stages & Workshops Delivered',
+        'Audience Reach: 1,200+ Engineers, Students & Tech Founders',
+        'Topics: Frontend Architecture, Bitcoin Protocol, ICP.Hub & Web3 Canisters',
+      ]"
+    />
+
+    <!-- Chapter 04: Public Engagements & Speaking Section -->
+    <EventsSection />
+
+    <!-- Story Transition 04: Events -> Contact -->
+    <StoryTransition
+      fromAct="Chapter 04: Speaking"
+      toAct="Chapter 05: Contact"
+      phase="Milestone 04"
       title="Ready to Build High-Impact Digital Products Together?"
       targetId="dispatch"
       actionText="Get in Touch"
-      accentColor="olive"
-      narrative="You've explored the background, inspected the technical toolkit, and examined battle-tested production systems. Whether you're hiring for a senior engineering role or seeking consulting for your next milestone, let's talk."
+      accentColor="emerald"
+      narrative="You've explored the background, inspected the technical toolkit, examined battle-tested production systems, and reviewed community stage engagements. Whether you're hiring for a senior engineering role or seeking consulting for your next milestone, let's talk."
       :terminalLogs="[
         'Availability: Open for Full-Time Senior & Lead Roles',
         'Relocation: UK & Germany Relocation Ready',
@@ -76,7 +97,7 @@ import StoryTransition from "@/components/StoryTransition.vue";
       ]"
     />
 
-    <!-- Chapter 04: Contact & Editorial Footer -->
+    <!-- Chapter 05: Contact & Editorial Footer -->
     <Footer />
   </div>
 </template>

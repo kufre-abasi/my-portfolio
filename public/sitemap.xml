@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.kufreabasibassey.com/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.kufreabasibassey.com/og-image.jpeg</image:loc>
+      <image:title>Kufre-Abasi Bassey — Senior Frontend &amp; Mobile Engineer</image:title>
+      <image:caption>Senior Frontend and Mobile Engineer portfolio of Kufre-Abasi Bassey</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kufreabasibassey.com/events</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.kufreabasibassey.com/og-image.jpeg</image:loc>
+      <image:title>Kufre-Abasi Bassey — Technical Speaking &amp; Hackathon Gallery</image:title>
+      <image:caption>Keynote stages, workshops, and hackathons including ICP.Hub, BitDevs, GDSC, and Tech Ignite</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kufreabasibassey.com/blink-reminder</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kufreabasibassey.com/blink-reminder-icon.png</image:loc>
+      <image:title>Blink Reminder — Minimalist Eye Health Desktop App</image:title>
+      <image:caption>Open-source eye-strain prevention utility by Kufre-Abasi Bassey</image:caption>
+    </image:image>
+  </url>
+</urlset>

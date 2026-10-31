@@ -50,7 +50,7 @@ const scrollToSection = (id) => {
     <div class="container mx-auto px-4 lg:px-8 py-3.5 flex items-center justify-between">
       <!-- Left: Logo & Title -->
       <a href="#profile" @click.prevent="scrollToSection('profile')" class="group flex items-center gap-3 cursor-pointer">
-        <div class="w-9 h-9 rounded-full bg-[#0D0D0D] text-white flex items-center justify-center font-display text-base font-semibold group-hover:bg-[#556B2F] transition-colors shadow-sm">
+        <div class="w-9 h-9 rounded-none bg-[#0D0D0D] text-white flex items-center justify-center font-display text-base font-semibold group-hover:bg-[#556B2F] transition-colors shadow-sm">
           KB
         </div>
         <div class="flex flex-col">
@@ -64,61 +64,76 @@ const scrollToSection = (id) => {
       </a>
 
       <!-- Center: Editorial Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-medium tracking-normal text-[#4A4845]">
+      <nav class="hidden md:flex items-center gap-7 text-xs font-medium tracking-normal text-[#4A4845]">
         <button
           @click="scrollToSection('profile')"
           class="hover:text-[#556B2F] transition-colors flex items-center gap-1.5 py-1"
         >
           <span class="text-[10px] font-mono text-[#7A756D]">01.</span>
-          <span>About & Story</span>
+          <span>About</span>
         </button>
         <button
           @click="scrollToSection('skills')"
           class="hover:text-[#556B2F] transition-colors flex items-center gap-1.5 py-1"
         >
           <span class="text-[10px] font-mono text-[#7A756D]">02.</span>
-          <span>Technical Toolkit</span>
+          <span>Toolkit</span>
         </button>
         <button
           @click="scrollToSection('projects')"
           class="hover:text-[#556B2F] transition-colors flex items-center gap-1.5 py-1"
         >
           <span class="text-[10px] font-mono text-[#7A756D]">03.</span>
-          <span>Selected Work</span>
+          <span>Work</span>
         </button>
+        <button
+          @click="scrollToSection('events')"
+          class="hover:text-[#556B2F] transition-colors flex items-center gap-1.5 py-1"
+        >
+          <span class="text-[10px] font-mono text-[#7A756D]">04.</span>
+          <span>Events</span>
+        </button>
+        <RouterLink
+          to="/events"
+          class="hover:text-[#556B2F] text-[#556B2F] transition-colors flex items-center gap-1 py-1 font-semibold"
+        >
+          <span>Gallery</span>
+          <span class="text-[10px] font-mono">↗</span>
+        </RouterLink>
         <button
           @click="toggleModal"
           class="hover:text-[#556B2F] transition-colors flex items-center gap-1.5 py-1"
         >
-          <span class="text-[10px] font-mono text-[#7A756D]">04.</span>
-          <span>Get in Touch</span>
+          <span class="text-[10px] font-mono text-[#7A756D]">05.</span>
+          <span>Contact</span>
         </button>
       </nav>
 
       <!-- Right: Action Buttons -->
       <div class="flex items-center gap-3">
-        <!-- Resume Pill Button -->
+        <!-- Resume Button (Sharp) -->
         <a
           href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m"
           target="_blank"
+          rel="noopener noreferrer"
           role="button"
           class="scroll-btn-primary text-xs py-2 px-4 shadow-sm"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="16" y1="13" x2="8" y2="13"></line>
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
-          </svg>
-          <span>View Resume</span>
+          </svg> -->
+          <span> Resume</span>
         </a>
 
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle (Sharp) -->
         <button
           @click="toggleMobileMenu"
           aria-label="Toggle navigation menu"
-          class="md:hidden p-2 text-[#0D0D0D] border border-[#E8E4DF] bg-white hover:border-[#556B2F] transition-all rounded-full shadow-sm"
+          class="md:hidden p-2 text-[#0D0D0D] border border-[#E8E4DF] bg-white hover:border-[#556B2F] transition-all rounded-none shadow-sm"
         >
           <svg v-if="!showMobile" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -157,10 +172,25 @@ const scrollToSection = (id) => {
         <span class="text-xs text-[#7A756D]">→</span>
       </button>
       <button
+        @click="scrollToSection('events')"
+        class="text-left text-[#0D0D0D] hover:text-[#556B2F] py-2.5 border-b border-[#E8E4DF] flex items-center justify-between font-medium"
+      >
+        <span>04. Speaking & Events</span>
+        <span class="text-xs text-[#7A756D]">→</span>
+      </button>
+      <RouterLink
+        to="/events"
+        @click="showMobile = false"
+        class="text-left text-[#556B2F] font-semibold py-2.5 border-b border-[#E8E4DF] flex items-center justify-between"
+      >
+        <span>★ Full Interactive Story Gallery</span>
+        <span class="text-xs text-[#556B2F]">↗</span>
+      </RouterLink>
+      <button
         @click="() => { showMobile = false; toggleModal(); }"
         class="text-left text-[#0D0D0D] hover:text-[#556B2F] py-2.5 border-b border-[#E8E4DF] flex items-center justify-between font-medium"
       >
-        <span>04. Get in Touch</span>
+        <span>05. Get in Touch</span>
         <span class="text-xs text-[#7A756D]">→</span>
       </button>
 
@@ -168,6 +198,7 @@ const scrollToSection = (id) => {
         <a
           href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m"
           target="_blank"
+          rel="noopener noreferrer"
           class="scroll-btn-primary w-full text-center"
         >
           View Full Resume

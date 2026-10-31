@@ -4,18 +4,18 @@
     <div class="absolute inset-0" @click="closeModal"></div>
 
     <div
-      class="relative z-10 w-full max-w-lg bg-white border border-[#E8E4DF] rounded-3xl shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-300"
+      class="relative z-10 w-full max-w-lg bg-white border border-[#E8E4DF] rounded-none shadow-2xl p-6 sm:p-8 overflow-hidden transition-all duration-300"
     >
       <!-- Top Header -->
       <div class="flex items-center justify-between pb-4 mb-6 border-b border-[#E8E4DF]">
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-[#15803D] animate-ping"></span>
+          <span class="w-1.5 h-1.5 bg-[#15803D] animate-ping"></span>
           <span class="font-mono text-xs text-[#7A756D] uppercase tracking-wider font-semibold">DIRECT COMMUNICATIONS</span>
         </div>
         <button
           @click="closeModal"
           aria-label="Close dialog"
-          class="p-2 text-[#7A756D] hover:text-[#0D0D0D] hover:bg-[#FAF9F7] rounded-full transition-colors"
+          class="p-2 text-[#7A756D] hover:text-[#0D0D0D] hover:bg-[#FAF9F7] rounded-none transition-colors border border-transparent hover:border-[#E8E4DF]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -45,7 +45,7 @@
               v-model="formState.name"
               type="text"
               placeholder="e.g. Alex Morgan / Apex Dynamics"
-              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-xl transition-all outline-none"
+              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-none transition-all outline-none"
             />
             <span v-if="errorsMsg.name" class="text-[11px] font-sans text-rose-500 mt-1 block">
               Name or organization is required.
@@ -61,7 +61,7 @@
               v-model="formState.email"
               type="email"
               placeholder="name@company.com"
-              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-xl transition-all outline-none"
+              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-none transition-all outline-none"
             />
             <span v-if="errorsMsg.email" class="text-[11px] font-sans text-rose-500 mt-1 block">
               A valid email address is required.
@@ -77,7 +77,7 @@
               v-model="formState.subject"
               type="text"
               placeholder="Engineering Role / Project Engagement / Advisory"
-              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-xl transition-all outline-none"
+              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-none transition-all outline-none"
             />
             <span v-if="errorsMsg.subject" class="text-[11px] font-sans text-rose-500 mt-1 block">
               Subject line is required.
@@ -93,7 +93,7 @@
               v-model="formState.message"
               rows="4"
               placeholder="Describe your requirements, project scope, team role, or timeline..."
-              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-xl transition-all outline-none resize-none"
+              class="w-full px-4 py-2.5 bg-[#FAF9F7] border border-[#E8E4DF] focus:border-[#556B2F] focus:bg-white text-[#0D0D0D] placeholder-[#A8A49D] text-xs sm:text-sm rounded-none transition-all outline-none resize-none"
             ></textarea>
             <span v-if="errorsMsg.message" class="text-[11px] font-sans text-rose-500 mt-1 block">
               Message cannot be empty.
@@ -120,13 +120,13 @@
 
       <!-- STEP 1: TRANSMISSION SUCCESS CONFIRMATION -->
       <div v-if="steps[1]" class="text-center py-8 sm:py-12">
-        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-[#DCFCE7] text-[#15803D] shadow-xs">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-none bg-[#DCFCE7] text-[#15803D] shadow-xs border border-[#15803D]/20">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
 
-        <div class="inline-block px-3 py-1 bg-[#FAF9F7] border border-[#E8E4DF] text-[#15803D] font-mono text-xs rounded-full uppercase tracking-wider mb-3">
+        <div class="inline-block px-3 py-1 bg-[#FAF9F7] border border-[#E8E4DF] text-[#15803D] font-mono text-xs rounded-none uppercase tracking-wider mb-3">
           Message Received
         </div>
 

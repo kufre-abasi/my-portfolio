@@ -53,7 +53,7 @@ const goHomeProjects = () => {
           @click="goHomeProjects"
           class="group flex items-center gap-2.5 text-xs font-mono font-medium text-[#4A4845] hover:text-[#556B2F] transition-colors"
         >
-          <span class="w-7 h-7 rounded-full bg-white border border-[#E8E4DF] group-hover:border-[#556B2F] flex items-center justify-center transition-colors shadow-xs">
+          <span class="w-7 h-7 rounded-none bg-white border border-[#E8E4DF] group-hover:border-[#556B2F] flex items-center justify-center transition-colors shadow-xs">
             ←
           </span>
           <span>Back to Selected Work</span>
@@ -63,8 +63,9 @@ const goHomeProjects = () => {
         <div class="flex items-center gap-2 sm:gap-3">
           <button
             @click="copyShareLink"
-            class="px-3 sm:px-4 py-2 bg-white hover:bg-[#FAF9F7] border border-[#E8E4DF] rounded-full text-xs font-mono font-medium text-[#0D0D0D] flex items-center gap-1.5 transition-all shadow-xs"
+            class="px-3 sm:px-4 py-2 bg-white hover:bg-[#FAF9F7] border border-[#E8E4DF] rounded-none text-xs font-mono font-medium text-[#0D0D0D] flex items-center gap-1.5 transition-all shadow-xs"
           >
+          
             <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-[#556B2F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -78,7 +79,7 @@ const goHomeProjects = () => {
           <a
             :href="dmgUrl"
             :download="dmgName"
-            class="px-3.5 sm:px-5 py-2 bg-[#0D0D0D] hover:bg-[#556B2F] text-white rounded-full text-xs font-mono font-medium flex items-center gap-1.5 transition-all shadow-sm"
+            class="px-3.5 sm:px-5 py-2 bg-[#0D0D0D] hover:bg-[#556B2F] text-white rounded-none text-xs font-mono font-medium flex items-center gap-1.5 transition-all shadow-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -101,18 +102,19 @@ const goHomeProjects = () => {
       <div class="container mx-auto px-4 lg:px-8 relative z-10">
         <!-- Product Header Badge -->
         <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border border-[#E8E4DF] rounded-full text-xs font-mono text-[#4A4845] uppercase tracking-wider mb-6 shadow-xs">
-            <span class="w-2 h-2 rounded-full bg-[#1D9E75] animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border border-[#E8E4DF] rounded-none text-xs font-mono text-[#4A4845] uppercase tracking-wider mb-6 shadow-xs">
+            <span class="w-1.5 h-1.5 bg-[#1D9E75] animate-pulse"></span>
             <span>macOS Desktop Companion • v1.0.0 Bundle</span>
           </div>
 
           <!-- Icon Bay -->
           <div class="relative w-28 h-28 sm:w-32 sm:h-32 mb-8 group">
-            <div class="absolute inset-0 bg-[#1D9E75]/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
+            <div class="absolute inset-0 bg-[#1D9E75]/30 blur-2xl group-hover:blur-3xl transition-all"></div>
             <img
               :src="blinkReminderLogo"
-              alt="Blink Reminder Logo"
-              class="relative z-10 w-full h-full object-contain rounded-3xl shadow-xl border border-white/20"
+              alt="Blink Reminder — Minimalist Eye Care Desktop Application Icon"
+              class="relative z-10 w-full h-full object-contain rounded-none shadow-xl border border-white/20"
+              loading="eager"
             />
           </div>
 
@@ -130,7 +132,7 @@ const goHomeProjects = () => {
             <a
               :href="dmgUrl"
               :download="dmgName"
-              class="w-full sm:w-auto px-7 py-3.5 bg-[#15803D] hover:bg-[#166534] text-white rounded-2xl font-mono text-sm font-semibold flex items-center justify-center gap-2.5 transition-all shadow-md hover:-translate-y-0.5"
+              class="w-full sm:w-auto px-7 py-3.5 bg-[#15803D] hover:bg-[#166534] text-white rounded-none font-mono text-sm font-semibold flex items-center justify-center gap-2.5 transition-all shadow-md hover:-translate-y-0.5"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -143,7 +145,7 @@ const goHomeProjects = () => {
 
             <button
               @click="copyShareLink"
-              class="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-[#FAF9F7] border border-[#E8E4DF] text-[#0D0D0D] rounded-2xl font-mono text-sm font-medium flex items-center justify-center gap-2 transition-all shadow-xs hover:-translate-y-0.5"
+              class="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-[#FAF9F7] border border-[#E8E4DF] text-[#0D0D0D] rounded-none font-mono text-sm font-medium flex items-center justify-center gap-2 transition-all shadow-xs hover:-translate-y-0.5"
             >
               <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#556B2F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -158,10 +160,10 @@ const goHomeProjects = () => {
 
           <!-- Specs Pill Line -->
           <div class="mt-6 flex flex-wrap items-center justify-center gap-2.5 text-[11px] font-mono text-[#7A756D]">
-            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-md">Universal x64 / Rosetta</span>
-            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-md">&lt; 15 MB RAM</span>
-            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-md">Native Tray Daemon</span>
-            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-md">100% Offline & Private</span>
+            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-none">Universal x64 / Rosetta</span>
+            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-none">&lt; 15 MB RAM</span>
+            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-none">Native Tray Daemon</span>
+            <span class="px-2.5 py-0.5 bg-white border border-[#E8E4DF] rounded-none">100% Offline & Private</span>
           </div>
         </div>
 
@@ -250,9 +252,9 @@ const goHomeProjects = () => {
             </div>
 
             <!-- Feature 1 -->
-            <div class="p-5 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs hover:border-[#1D9E75]/40 transition-colors">
+            <div class="p-5 bg-white border border-[#E8E4DF] rounded-none shadow-xs hover:border-[#1D9E75]/40 transition-colors">
               <div class="flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
+                <div class="w-8 h-8 rounded-none bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
                   ⚡
                 </div>
                 <div>
@@ -267,9 +269,9 @@ const goHomeProjects = () => {
             </div>
 
             <!-- Feature 2 -->
-            <div class="p-5 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs hover:border-[#1D9E75]/40 transition-colors">
+            <div class="p-5 bg-white border border-[#E8E4DF] rounded-none shadow-xs hover:border-[#1D9E75]/40 transition-colors">
               <div class="flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
+                <div class="w-8 h-8 rounded-none bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
                   📍
                 </div>
                 <div>
@@ -284,9 +286,9 @@ const goHomeProjects = () => {
             </div>
 
             <!-- Feature 3 -->
-            <div class="p-5 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs hover:border-[#1D9E75]/40 transition-colors">
+            <div class="p-5 bg-white border border-[#E8E4DF] rounded-none shadow-xs hover:border-[#1D9E75]/40 transition-colors">
               <div class="flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
+                <div class="w-8 h-8 rounded-none bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
                   🚀
                 </div>
                 <div>
@@ -301,9 +303,9 @@ const goHomeProjects = () => {
             </div>
 
             <!-- Feature 4 -->
-            <div class="p-5 bg-white border border-[#E8E4DF] rounded-2xl shadow-xs hover:border-[#1D9E75]/40 transition-colors">
+            <div class="p-5 bg-white border border-[#E8E4DF] rounded-none shadow-xs hover:border-[#1D9E75]/40 transition-colors">
               <div class="flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
+                <div class="w-8 h-8 rounded-none bg-[#1D9E75]/10 text-[#1D9E75] flex items-center justify-center font-bold shrink-0">
                   🔔
                 </div>
                 <div>
@@ -319,27 +321,27 @@ const goHomeProjects = () => {
           </div>
         </div>
 
-        <!-- Installation Instructions Card -->
-        <div class="max-w-4xl mx-auto p-6 sm:p-8 bg-white border border-[#E8E4DF] rounded-3xl shadow-sm mb-16">
+        <!-- Installation Instructions Card (Sharp) -->
+        <div class="max-w-4xl mx-auto p-6 sm:p-8 bg-white border border-[#E8E4DF] rounded-none shadow-sm mb-16">
           <div class="text-xs font-mono uppercase tracking-wider text-[#7A756D] mb-4 pb-3 border-b border-[#E8E4DF] flex items-center justify-between">
             <span class="font-semibold text-[#0D0D0D]">macOS Installation Walkthrough</span>
             <span class="text-[#15803D]">3 Simple Steps</span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl">
+            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-none">
               <div class="font-mono text-xs font-bold text-[#15803D] mb-1.5">01 // DOWNLOAD</div>
               <div class="text-sm font-semibold text-[#0D0D0D] mb-1">Grab the .DMG</div>
-              <p class="text-xs text-[#4A4845]">Click download to save <code class="font-mono text-[11px] bg-white px-1 py-0.5 rounded border border-[#E8E4DF]">Blink Reminder_1.0.0_x64.dmg</code>.</p>
+              <p class="text-xs text-[#4A4845]">Click download to save <code class="font-mono text-[11px] bg-white px-1 py-0.5 rounded-none border border-[#E8E4DF]">Blink Reminder_1.0.0_x64.dmg</code>.</p>
             </div>
 
-            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl">
+            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-none">
               <div class="font-mono text-xs font-bold text-[#15803D] mb-1.5">02 // DRAG & DROP</div>
               <div class="text-sm font-semibold text-[#0D0D0D] mb-1">Install to Apps</div>
               <p class="text-xs text-[#4A4845]">Double-click the DMG and drag the Blink Reminder icon directly into your Applications folder.</p>
             </div>
 
-            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl">
+            <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-none">
               <div class="font-mono text-xs font-bold text-[#15803D] mb-1.5">03 // LAUNCH</div>
               <div class="text-sm font-semibold text-[#0D0D0D] mb-1">Start Session</div>
               <p class="text-xs text-[#4A4845]">Open from Applications. The eye icon will appear in your system tray and start tracking your session.</p>
@@ -347,19 +349,19 @@ const goHomeProjects = () => {
           </div>
 
           <!-- Gatekeeper Advisory -->
-          <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl text-xs text-[#4A4845] font-sans">
+          <div class="p-4 bg-[#FAF9F7] border border-[#E8E4DF] rounded-none text-xs text-[#4A4845] font-sans">
             <div class="font-bold text-[#0D0D0D] font-mono text-[11px] uppercase tracking-wider mb-1 flex items-center gap-1.5">
               <span>ℹ️</span>
               <span>macOS Gatekeeper First-Launch Note</span>
             </div>
             <p>
-              Because this is an independent, non-App Store open release, macOS Gatekeeper may show a verification dialog on first open. Simply right-click <code class="font-mono text-[11px] bg-white px-1 rounded border border-[#E8E4DF]">Blink Reminder.app</code> and select <strong>Open</strong>, or navigate to <em>System Settings &gt; Privacy &amp; Security</em> and click <strong>Open Anyway</strong>.
+              Because this is an independent, non-App Store open release, macOS Gatekeeper may show a verification dialog on first open. Simply right-click <code class="font-mono text-[11px] bg-white px-1 rounded-none border border-[#E8E4DF]">Blink Reminder.app</code> and select <strong>Open</strong>, or navigate to <em>System Settings &gt; Privacy &amp; Security</em> and click <strong>Open Anyway</strong>.
             </p>
           </div>
         </div>
 
-        <!-- Terminal Curl Section for Developers -->
-        <div class="max-w-4xl mx-auto p-6 bg-[#0D0D0D] text-white rounded-3xl shadow-lg mb-12 font-mono">
+        <!-- Terminal Curl Section for Developers (Sharp) -->
+        <div class="max-w-4xl mx-auto p-6 bg-[#0D0D0D] text-white rounded-none shadow-lg mb-12 font-mono">
           <div class="flex items-center justify-between pb-3 border-b border-white/10 text-xs text-white/50 mb-3">
             <span>Direct Terminal Install (cURL)</span>
             <span>macOS x64 / Rosetta</span>
