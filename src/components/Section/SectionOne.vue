@@ -143,7 +143,7 @@
             </p>
             <p class="text-[#7A756D] text-xs md:text-sm font-mono pt-3 border-t border-[#E8E4DF] flex items-center gap-2">
               <span class="text-[#556B2F] font-bold">→</span>
-              <span>B.Sc. Geo-Informatics & Surveying; exploring Bitcoin Core RPC/regtest, Rust, NestJS, and spatial navigation architectures.</span>
+              <span>B.Sc. Geo-Informatics & Surveying; Aleo Blockchain CodeSprint spotlighted builder (Zero-Knowledge & Leo); exploring Bitcoin Core RPC/regtest, Rust, and spatial navigation architectures.</span>
             </p>
           </div>
 

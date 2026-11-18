@@ -17,6 +17,7 @@ import workremitsLogo from "@/assets/workremits-logo.svg";
 import fajiriLogo from "@/assets/fajiri-logo.png";
 import geogridLogo from "@/assets/geogrid-logo.svg";
 import blinkReminderLogo from "@/assets/blink-reminder-logo.png";
+import aleoLogo from "@/assets/aleo-logo.svg";
 
 const showModal = ref(false);
 const activeFilter = ref("ALL");
@@ -40,6 +41,7 @@ const brands = [
   { name: "Zoogla", location: "South Africa", role: "Support Frontend Dev", logo: zoogla },
   { name: "Gokamba", location: "London, UK", role: "Frontend Web Developer", logo: KavlrLogo },
   { name: "MySpurr", location: "Nigeria", role: "Frontend Web Developer", logo: MySpurr },
+  { name: "Aleo (Leofolio)", location: "Global // Web3", role: "CodeSprint Spotlight & Builder", logo: aleoLogo },
   { name: "Tribinnov Africa", location: "Nigeria", role: "Frontend Web Developer", logo: tribinnovAfrica },
 ];
 
@@ -225,12 +227,15 @@ const projects = ref([
     timeline: "ALEO CODESPRINT V3 (3RD PLACE)",
     location: "Global // Open Source",
     category: "FINTECH",
-    tag: "ZERO-KNOWLEDGE // WEB3 FREELANCING",
-    status: "AWARD WINNING",
-    logo: null,
-    content: "Built a zero-knowledge freelancing platform for private professional verification and smart-contract-based payments using Aleo blockchain and Aleo SDK. Designed frontend and blockchain interaction flows around privacy-preserving credentials and escrow.",
-    tech: ["Aleo SDK", "Zero-Knowledge Proofs", "TypeScript", "Smart Contracts", "Web3"],
-    url: "https://github.com/kufre-abasi",
+    tag: "ZERO-KNOWLEDGE // ALEO SPOTLIGHT // ESCROW",
+    status: "OFFICIALLY SPOTLIGHTED",
+    logo: aleoLogo,
+    content: "Officially spotlighted by the Aleo Foundation for architecting Leofolio—a privacy-preserving freelancing and decentralized escrow protocol. Engineered Leo smart contracts enabling anonymous verifiable professional reputations and trustless milestone payments without exposing client or freelancer financial records.",
+    featuredNote: "Official Developer Spotlight on Aleo.org",
+    tech: ["Aleo SDK", "Leo Language", "Zero-Knowledge Proofs", "Smart Contracts", "TypeScript", "Web3"],
+    url: "https://aleo.org/post/codesprint-privacy-first-freelancing/",
+    actionLabel: "Read Aleo Spotlight",
+    githubUrl: "https://github.com/Minimask-labs/Leofolio",
   },
   {
     id: "14",
@@ -363,6 +368,58 @@ const filteredProjects = computed(() => {
           </div>
         </div>
 
+        <!-- Global Editorial Feature Banner: Aleo Blockchain Spotlight -->
+        <div class="w-full max-w-5xl mb-12 p-6 sm:p-8 bg-gradient-to-br from-[#0D0D0D] via-[#141414] to-[#0D0D0D] text-white border border-[#2A2A2A] rounded-none shadow-lg relative overflow-hidden group">
+          <!-- Subtle Glow Accents -->
+          <div class="absolute -right-16 -top-16 w-64 h-64 bg-[#556B2F]/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-16 -bottom-16 w-64 h-64 bg-[#00FF9D]/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="space-y-3 max-w-2xl text-left">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-white/10 border border-white/15 text-[11px] font-mono text-[#00FF9D] uppercase tracking-wider">
+                <span class="w-1.5 h-1.5 bg-[#00FF9D] animate-pulse"></span>
+                <span>GLOBAL EDITORIAL SPOTLIGHT // ALEO FOUNDATION</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl md:text-3xl font-display text-white tracking-tight leading-snug">
+                “CodeSprint Spotlight: Creating Privacy-First Freelancing on Aleo”
+              </h3>
+              <p class="text-xs sm:text-sm font-sans text-white/80 leading-relaxed">
+                Officially spotlighted by the Aleo Foundation for building <strong class="text-white">Leofolio</strong>—a zero-knowledge freelancing and decentralized escrow protocol. Engineered Leo smart contracts enabling freelancers to prove credentials and reputations anonymously while executing trustless milestone payments without leaking client or freelancer financial data.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 text-[11px] font-mono text-white/60 pt-1">
+                <span class="text-white/80">Published on Aleo.org</span>
+                <span>•</span>
+                <span>Zero-Knowledge Proofs (ZKP)</span>
+                <span>•</span>
+                <span>Leo Smart Contracts</span>
+                <span>•</span>
+                <span class="text-[#00FF9D]">3rd Place Aleo CodeSprint</span>
+              </div>
+            </div>
+
+            <div class="shrink-0 flex flex-col sm:flex-row md:flex-col gap-2.5 w-full md:w-auto">
+              <a
+                href="https://aleo.org/post/codesprint-privacy-first-freelancing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 bg-white text-[#0D0D0D] hover:bg-[#00FF9D] hover:text-[#0D0D0D] border border-transparent text-xs font-mono font-bold flex items-center justify-center gap-2 transition-all shadow-sm rounded-none"
+              >
+                <span>Read Feature on Aleo.org</span>
+                <span class="font-mono">↗</span>
+              </a>
+              <a
+                href="https://github.com/Minimask-labs/Leofolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-2.5 bg-white/5 hover:bg-white/15 text-white/90 border border-white/20 text-xs font-mono font-medium flex items-center justify-center gap-2 transition-all rounded-none"
+              >
+                <span>Inspect Protocol GitHub</span>
+                <span class="font-mono">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Project Filter Tabs (Sharp Edges) -->
         <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/80 border border-[#E8E4DF] rounded-none font-sans text-xs shadow-xs backdrop-blur-sm">
           <button
@@ -443,9 +500,15 @@ const filteredProjects = computed(() => {
               </div>
 
               <!-- Description -->
-              <p class="text-[#4A4845] text-xs sm:text-sm leading-relaxed font-sans mb-5 line-clamp-3">
+              <p class="text-[#4A4845] text-xs sm:text-sm leading-relaxed font-sans mb-3 line-clamp-3">
                 {{ item.content }}
               </p>
+
+              <!-- Featured Note Badge (e.g. Aleo Spotlight) -->
+              <div v-if="item.featuredNote" class="mb-4 px-2.5 py-1 bg-[#FAF9F7] border border-[#556B2F]/40 text-[11px] font-mono text-[#556B2F] font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-[#556B2F] animate-pulse"></span>
+                <span>{{ item.featuredNote }}</span>
+              </div>
 
               <!-- Tech Stack Tags -->
               <div class="flex flex-wrap gap-1.5 mb-2">
@@ -492,12 +555,36 @@ const filteredProjects = computed(() => {
               rel="noopener noreferrer"
               class="scroll-btn-secondary flex-1 w-full flex items-center justify-between text-xs py-2.5 group-hover:border-[#556B2F] group-hover:text-[#556B2F] transition-colors"
             >
-              <span>Explore Project</span>
+              <span>{{ item.actionLabel || 'Explore Project' }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
+            </a>
+
+            <a
+              v-if="item.liveUrl"
+              :href="item.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto px-3.5 py-2.5 bg-[#0D0D0D] hover:bg-[#556B2F] text-white text-xs font-mono font-medium rounded-none flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              title="Launch Live Application"
+            >
+              <span>Live App</span>
+              <span class="text-[10px]">↗</span>
+            </a>
+
+            <a
+              v-if="item.githubUrl"
+              :href="item.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto px-3 py-2.5 bg-white hover:bg-[#FAF9F7] text-[#0D0D0D] border border-[#E8E4DF] hover:border-[#0D0D0D] text-xs font-mono font-medium rounded-none flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              title="Inspect GitHub Repository"
+            >
+              <span>GitHub</span>
+              <span class="text-[10px]">↗</span>
             </a>
 
             <a
