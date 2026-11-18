@@ -34,4 +34,15 @@
       <image:caption>Open-source eye-strain prevention utility by Kufre-Abasi Bassey</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.kufreabasibassey.com/geogrid</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.kufreabasibassey.com/assets/geogrid-og.png</image:loc>
+      <image:title>GeoGrid Campus — Grid-Based Spatial Addressing &amp; Wayfinding</image:title>
+      <image:caption>Academic B.Sc research and production Web GIS by Kufre-Abasi Bassey</image:caption>
+    </image:image>
+  </url>
 </urlset>
