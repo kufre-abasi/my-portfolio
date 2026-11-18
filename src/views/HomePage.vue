@@ -52,6 +52,7 @@ import StoryTransition from "@/components/StoryTransition.vue";
       narrative="Theoretical depth only matters when proven in the hands of real users. From multi-currency statutory payroll engines in London to mobile fintech in Zambia and native desktop systems, explore 17 shipped products delivered across 14+ global partners."
       :terminalLogs="[
         '17 Verified Production Apps across 7 Nations',
+        'Global Editorial Spotlight: Privacy-First Freelancing on Aleo Blockchain',
         'Partner Network: UK, Canada, US, Zambia, South Africa, Netherlands, Nigeria',
         'High-Throughput Fintech, Global EOR/Payroll & Real-Time Analytics',
       ]"
