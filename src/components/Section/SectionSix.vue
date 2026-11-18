@@ -124,9 +124,12 @@ const projects = ref([
     tag: "GEOSPATIAL // SMART CAMPUS // WAYFINDING",
     status: "LIVE PRODUCTION",
     logo: geogridLogo,
-    content: "Built an intelligent campus navigation and smart-grid geocoding web platform. Implemented natural language spatial search, turn-by-turn walking directions for campus buildings and multi-floor offices, a full-featured GeoJSON map editor to draw and calibrate points, boundary lines, and 2D building polygons, and administrative tools for bulk campus spreadsheet imports.",
-    tech: ["React", "TypeScript", "Vite", "GeoJSON", "Mapbox / Leaflet", "TanStack Router", "Tailwind CSS"],
-    url: "https://campus-grid-nav.lovable.app/",
+    content: "Built an intelligent campus navigation and smart-grid geocoding web platform based on my B.Sc research in Geo-Informatics at University of Uyo. Implemented 5m × 5m spatial grid partitioning, natural language forward/reverse geocoding, turn-by-turn Dijkstra/A* pedestrian routing for campus blocks, and a full-featured GeoJSON map editor to calibrate points, boundary lines, and 2D building polygons.",
+    tech: ["React", "TypeScript", "Vite", "GeoJSON", "Mapbox / Leaflet", "PostGIS", "Tailwind CSS"],
+    url: "/geogrid",
+    isInternalRoute: true,
+    actionLabel: "Case Study & Research",
+    // url: "https://campus-navigator.kufreabasibassey.com/",
   },
   {
     id: "07",
@@ -458,18 +461,30 @@ const filteredProjects = computed(() => {
           </div>
 
           <!-- Card Action Footer -->
-          <div class="p-6 pt-0 flex flex-col sm:flex-row items-center gap-2">
+          <div class="p-6 pt-0 flex flex-wrap sm:flex-row items-center gap-2">
             <router-link
               v-if="item.isInternalRoute"
               :to="item.url"
               class="scroll-btn-secondary flex-1 w-full flex items-center justify-between text-xs py-2.5 group-hover:border-[#556B2F] group-hover:text-[#556B2F] transition-colors"
             >
-              <span>View & Share App</span>
+              <span>{{ item.actionLabel || 'Explore Project' }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </router-link>
+
+            <!-- <a
+              v-if="item.liveUrl"
+              :href="item.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto px-3.5 py-2.5 bg-[#0D0D0D] hover:bg-[#556B2F] text-white text-xs font-mono font-medium rounded-none flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              title="Launch Live Web GIS"
+            >
+              <span>Live App</span>
+              <span class="text-[10px]">↗</span>
+            </a> -->
             <a
               v-else
               :href="item.url"

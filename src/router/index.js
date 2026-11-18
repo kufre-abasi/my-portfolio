@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import BlinkReminderView from "../views/BlinkReminderView.vue";
 import EventsGalleryView from "../views/EventsGalleryView.vue";
+import GeoGridCampusView from "../views/GeoGridCampusView.vue";
 
 const SITE_URL = "https://kufreabasibassey.com";
 const DEFAULT_TITLE = "Kufre-Abasi Bassey | Senior Frontend & Mobile Engineer | React Native, TypeScript, Vue";
@@ -43,6 +44,18 @@ const router = createRouter({
         description:
           "Download Blink Reminder for macOS and Windows. A lightweight, privacy-first desktop utility that prevents digital eye strain using the 20-20-20 rule.",
         canonical: `${SITE_URL}/blink-reminder`,
+      },
+    },
+    {
+      path: "/geogrid",
+      name: "GeoGridCampus",
+      component: GeoGridCampusView,
+      alias: ["/geogrid-campus", "/campus-grid"],
+      meta: {
+        title: "GeoGrid Campus — Grid-Based Spatial Addressing & Wayfinding | Kufre-Abasi Bassey",
+        description:
+          "Design and Implementation of a Grid-Based Spatial Addressing and Navigation System Using Geocoding Techniques. Academic B.Sc research and production Web GIS by Kufre-Abasi Bassey at University of Uyo.",
+        canonical: `${SITE_URL}/geogrid`,
       },
     },
   ],
